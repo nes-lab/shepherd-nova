@@ -1,4 +1,4 @@
-name: Test for Quality-Assurance
+name: QA-Tests
 on:
   pull_request:
     branches: [main]
