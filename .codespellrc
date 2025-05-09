@@ -1,0 +1,11 @@
+[codespell]
+
+builtin = clear,rare,informal,usage,code,en-GB_to_en-US
+
+skip = *.svg,
+
+ignore-words-list = fram
+
+# options without argument
+check-filenames =
+check-hidden =

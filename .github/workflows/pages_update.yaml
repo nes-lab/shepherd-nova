@@ -1,0 +1,34 @@
+name: Generate Docs via Github-Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_call:
+
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  run-quality-assurance:
+    uses: ./.github/workflows/quality_assurance.yaml
+  build-pages:
+    runs-on: ubuntu-latest
+    needs:
+      - run-quality-assurance
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      pages: write
+      id-token: write
+    steps:
+
+      - name: debug
+        run: echo ${{ github.event_name }}
+
+      - name: Build and Push Pages 🧱
+        uses: sphinx-notes/pages@v3
+        with:
+          publish: true
+          requirements_path: './'  # installs pyproject.toml

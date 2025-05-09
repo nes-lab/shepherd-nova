@@ -1,0 +1,21 @@
+name: Test for Quality-Assurance
+on:
+  pull_request:
+    branches: [main]
+  workflow_call:
+
+jobs:
+  QA:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Set up Python 🐍
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.13
+
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
+
+      - name: Run Pre-Commit Tests 🧪
+        uses: pre-commit/action@v3.0.1
