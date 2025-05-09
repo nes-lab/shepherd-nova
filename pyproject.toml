@@ -2,7 +2,7 @@
 name = "Shepherd-Nova"
 version = "0.1.0"
 description = "Public instance of the Shepherd Testbed"
-requires-python = ">=3.13"
+requires-python = ">=3.12"
 dependencies = [
     "sphinx>=7.0.0",
     "sphinxawesome-theme",
