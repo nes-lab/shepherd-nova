@@ -1,14 +1,11 @@
 
-Shepherd Nova
-=============
-
-.. xyz include:: ./content/landing_page.md
+.. include:: ./content/landing_page.md
+   :parser: myst_parser.sphinx_
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents
 
-   ./content/landing_page.md
    ./content/news.md
    ./content/deployment.md
 
@@ -18,7 +15,14 @@ Shepherd Nova
    ./content/webapi.md
 
    ./content/maintenance.md
-   ./content/about.md
+
+.. toctree::
+   :maxdepth: 2
+   :caption: About
+
+   ./about/contact.md
+   ./about/disclaimer.md
+   ./about/privacy.md
 
 ..
    Indices and tables

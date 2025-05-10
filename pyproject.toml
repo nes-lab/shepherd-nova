@@ -8,5 +8,6 @@ dependencies = [
     "sphinxawesome-theme",
     "sphinx-sitemap",
     "myst-parser",
+    "docutils",
     "pre-commit",
 ]

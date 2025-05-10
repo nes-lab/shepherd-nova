@@ -4,7 +4,7 @@
 
 project = 'Shepherd Nova'
 project_full = "Public Instance of the Shepherd Testbed"
-copyright = '2025, Ingmar Splitt'
+copyright = '2025, NES Lab'
 author = 'Ingmar Splitt'
 release = '0.1.0'
 builder = "html"
@@ -12,7 +12,6 @@ builder = "html"
 # -- General configuration ---------------------------------------------------
 
 extensions = [
-    "sphinxawesome_theme",
     "sphinx_sitemap",
     "myst_parser",
 ]
@@ -39,17 +38,18 @@ html_theme = 'sphinxawesome_theme'
 
 html_theme_options = {
     "show_scrolltop": True,
+    "show_breadcrumbs": True,
     "show_prev_next": True,
     "logo_light": "media/NESLogoCube.png",
     "logo_dark": "media/NESLogoCube.png",
-    "main_nav_links": {"About": "/content/about"},
-#    "main_nav_links": {
-#    },
+    #"main_nav_links": {"About": "/content/about"},
+    #"max_navbar_depth": 2,
+    #"show_nav_level": 2,
+    #"navigation_depth": 2,
 }
-# TODO: https://sphinxawesome.xyz/how-to/options/
+# https://sphinxawesome.xyz/how-to/options/
 
 html_title = project
-html_collapsible_definitions = True
 
 html_baseurl = "https://nes-lab.github.io/Shepherd-Nova/"
 html_permalinks_icon = "<span>#</span>"

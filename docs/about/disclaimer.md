@@ -1,33 +1,4 @@
-# About
-
-## Contact
-
-### NES Lab
-
-```{line-block}
-TU Darmstadt, Department of Computer Science
-[Networked Embedded Systems Lab](https://nes-lab.org/)
-S4|14, Room 2.2.01
-Mornewegstr. 30
-64293 Darmstadt
-Germany
-```
-
-### Physical address
-
-```{line-block}
-TU Dresden
-Barkhausen-Bau
-Helmholtzstrasse 18
-01069 Dresden
-```
-
-### Team
-
-- [Ingmar Splitt](https://nes-lab.org/ingmar-splitt/), Researcher, NES Lab
-- [Marco Zimmerling](https://nes-lab.org/marco-zimmerling/), Professor & Group Leader, NES Lab
-
-## Disclaimer
+# Disclaimer
 
 Shepherd Nova is public testbed that is offered to its users as a best-effort service without any guarantee of its functionality.
 While the team will try its best to ensure its correct operation, the availability and correct functionality of the testbed facility are not guaranteed.
@@ -44,9 +15,3 @@ By using the testbed, you consent to this disclaimer and agree to its terms.
 Note that this Website contains hyperlinks to external sites: while we strive to provide only quality links to useful and ethical websites, we have no control over the content and nature of these sites.
 These links to other websites do not imply a recommendation for all the content found on these sites.
 Site owners and content may change without notice and may occur before we have the opportunity to remove unsuitable links.
-
-## Privacy Policy
-
-```{note}
-WORK IN PROGRESS
-```

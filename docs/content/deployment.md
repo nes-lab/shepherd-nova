@@ -40,7 +40,7 @@ Notes:
 - values are in dBm
 - data is from 2025-03-11
 - P_TX = 8 dBm
-- 8min runtime, scheduler includes all nodes
+- 8 min runtime, scheduler includes all nodes
 - [TrafficBench](https://github.com/nes-lab/TrafficBench) was used
 
 ## Changes in near Future
@@ -51,7 +51,7 @@ With the official public release of the testbed in June 2025 it is planned to ro
 
 ![cfaed floor with marked future node-positions](../media/cfaed_floorplan_with_nodes.png)
 
-What does that mean for the user?
+### What does that mean for the user?
 
 - number of observable GPIO from the target increases from 9 to 12, [see table here](https://github.com/orgua/shepherd-targets/tree/main/hardware/shepherd_nRF_FRAM_Target_v1.3)
 - two power good lines to signal current state of the virtual source to the target ([similar to Riotee](https://www.riotee.nessie-circuits.de/docs/latest/hardware/module.html))
