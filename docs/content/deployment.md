@@ -1,8 +1,8 @@
 # Instance at TU Dresden
 
-:::{note}
+```{note}
 WORK IN PROGRESS
-:::
+```
 
 The initial deployment covered the ring of offices around the buildings ventilation system.
 The inner structure mostly blocks RF due to lots of metal vents.
@@ -37,15 +37,22 @@ Tx⟍Rx     1     2     3     4     5     6     7     8     9    10    11
 
 Notes:
 
-- values in dBm
+- values are in dBm
 - data is from 2025-03-11
 - P_TX = 8 dBm
 - 8min runtime, scheduler includes all nodes
 - [TrafficBench](https://github.com/nes-lab/TrafficBench) was used
 
-## Future Changes
+## Changes in near Future
 
 Currently new hardware is produced, validated and calibrated.
+
 With the official public release of the testbed in June 2025 it is planned to roll out an extended layout:
 
 ![cfaed floor with marked future node-positions](../media/cfaed_floorplan_with_nodes.png)
+
+What does that mean for the user?
+
+- number of observable GPIO from the target increases from 9 to 12, [see table here](https://github.com/orgua/shepherd-targets/tree/main/hardware/shepherd_nRF_FRAM_Target_v1.3)
+- two power good lines to signal current state of the virtual source to the target ([similar to Riotee](https://www.riotee.nessie-circuits.de/docs/latest/hardware/module.html))
+- usable node-count increases from 11 to 20+ for enabling more complex scenarios and a wider range of topologies

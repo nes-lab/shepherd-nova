@@ -1,8 +1,8 @@
 # Energy Environments
 
-:::{note}
+```{note}
 WORK IN PROGRESS
-:::
+```
 
 ## Static Environments
 

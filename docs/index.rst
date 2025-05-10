@@ -1,6 +1,8 @@
 
-Shepherd Nova documentation
-===========================
+Shepherd Nova
+=============
+
+.. xyz include:: ./content/landing_page.md
 
 .. toctree::
    :maxdepth: 2

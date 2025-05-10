@@ -1,8 +1,8 @@
 # Maintenance
 
-:::{note}
+```{note}
 WORK IN PROGRESS
-:::
+```
 
 For validating and updating the infrastructure a fixed timeslot is reserved every week, monday 8 PM CET, for 4 hours.
 If needed, the scheduler will be paused during that time period.

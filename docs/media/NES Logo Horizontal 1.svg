@@ -18,15 +18,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="1.7157407"
-     inkscape:cx="960.22666"
-     inkscape:cy="540.29142"
+     inkscape:zoom="0.85787035"
+     inkscape:cx="617.22613"
+     inkscape:cy="378.84512"
      inkscape:window-width="1245"
      inkscape:window-height="1224"
-     inkscape:window-x="1012"
-     inkscape:window-y="200"
+     inkscape:window-x="1047"
+     inkscape:window-y="202"
      inkscape:window-maximized="0"
-     inkscape:current-layer="svg32" />
+     inkscape:current-layer="Layer_2" />
   <defs
      id="defs1">
     <style
@@ -192,6 +192,9 @@
     <path
        class="cls-4"
        d="M599.66,643.5l-148-148V459.9l183.6,183.6Zm-89-207,148,148v35.59L475.05,436.5Zm125.18,22.84h-58.6V436.5h81.43v81.44H635.82ZM474.5,620.66h58.6V643.5H451.66V562.06H474.5Z"
-       id="path32" />
+       id="path32"
+       inkscape:export-filename="NESLogoCube.png"
+       inkscape:export-xdpi="92.753624"
+       inkscape:export-ydpi="92.753624" />
   </g>
 </svg>
