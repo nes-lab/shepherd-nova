@@ -1,15 +1,44 @@
 # Energy Environments
 
+The testbed offers a basic set of environments to satisfy most needs.
+This section will guide you through the characteristics to help you make a choice.
+
 ```{note}
-WORK IN PROGRESS
+We plan on extending the collection further in the near future.
+If you have wishes, ideas or actual recordings please don't hesitate [contacting](/about/contact.md) us.
 ```
 
 ## Static Environments
 
+A constant supply can be advantageous for various scenarios like debugging during firmware-development.
+The testbed offers a set of 60 min recordings with:
+
+- 2 or 3 V
+- 1, 5, 10 or 50 mA
+
+To select a static environment for an experiment the name can be derived like:
+
+`eenv_stativ_{U\mV}mV_{I\mA}_{t\s}s`
+
+So the 3 V, 50 mA trace is named `eenv_static_3000mV_50mA_3600s`.
+
 ## Dynamic Environments
 
-Artificial
+This sections contains artificial environments, beginning with on-off-patterns and ending with more complex simulated solar harvests.
+
+```{caution}
+WORK IN PROGRESS
+```
+
+```{tip}
+Setting the virtual power source to `direct` will enable passthrough-mode.
+The output-voltage for the target will directly react to the recording for truly replicating an on-off-pattern.
+```
 
 ## Real-World Environment
 
-Recorded with shepherd harvester.
+Traces recorded with the shepherd harvester are currently based on the [published data](https://zenodo.org/records/6383042) of a prior paper.
+
+```{caution}
+WORK IN PROGRESS
+```

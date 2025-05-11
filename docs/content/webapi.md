@@ -1,6 +1,6 @@
 # Web-API
 
-```{note}
+```{caution}
 WORK IN PROGRESS
 ```
 

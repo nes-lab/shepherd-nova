@@ -1,6 +1,6 @@
 # Maintenance
 
-```{note}
+```{caution}
 WORK IN PROGRESS
 ```
 
