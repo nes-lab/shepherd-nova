@@ -11,13 +11,17 @@ Unfortunately the RF-Performance of the nodes was not strong enough to close the
 
 For now (Mai 2025) the testbed was reshaped to mimic an elongated multihop mesh-network on the lower part of the office-floor.
 
+## Deployment
+
 Below is a screenshot of the [Campus-Navigator](https://navigator.tu-dresden.de/etplan/bar/02) with marked node-positions.
 
 ![cfaed floor with marked node-positions](../media/cfaed_floorplan_current.png)
 
 Most horizontal walls are concrete, while the walls between offices are drywall.
 
-The link-matrix of the Testbed looks like that:
+## Link-Matrix
+
+The link-matrix of the testbed looks like that:
 
 ```
 Tx⟍Rx     1     2     3     4     5     6     7     8     9    10    11
@@ -35,13 +39,13 @@ Tx⟍Rx     1     2     3     4     5     6     7     8     9    10    11
   11 |                                                  -75   -80
 ```
 
-Notes:
+**Notes**:
 
 - values are in dBm
 - data is from 2025-03-11
 - P_TX = 8 dBm
+- [TrafficBench](https://github.com/nes-lab/TrafficBench) was used to make the rf-survey
 - 8 min runtime, scheduler includes all nodes
-- [TrafficBench](https://github.com/nes-lab/TrafficBench) was used
 
 ## Changes in near Future
 

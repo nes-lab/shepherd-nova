@@ -4,7 +4,7 @@ The testbed offers a basic set of environments to satisfy most needs.
 This section will guide you through the characteristics to help you make a choice.
 
 ```{note}
-We plan on extending the collection further in the near future.
+We plan on extending this collection further in the near future.
 If you have wishes, ideas or actual recordings please don't hesitate [contacting](/about/contact.md) us.
 ```
 
@@ -20,7 +20,7 @@ To select a static environment for an experiment the name can be derived like:
 
 `eenv_stativ_{U\mV}mV_{I\mA}_{t\s}s`
 
-So the 3 V, 50 mA trace is named `eenv_static_3000mV_50mA_3600s`.
+So the trace with 3 V and 50 mA is selectable by name `eenv_static_3000mV_50mA_3600s`.
 
 ## Dynamic Environments
 
