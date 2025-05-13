@@ -9,14 +9,16 @@ Direct Link: <https://testbed.nes-lab.org/>
 
 The testbed offers:
 
-- [10+ observer-nodes](/content/deployment.md)
+- [10+ observer-nodes](/content/deployment.md) for distributed operation
 - [nRF52-Targets](https://github.com/orgua/shepherd-targets/) with additional msp430 that can be used as FRAM
-- patching of node-ID in target-firmware (optional)
-- recording of target-GPIO with up to 1 MHz and 9 Channels (optional)
+- consistently replicate real-world spatio-temporal energy availability across multiple experiments
+  - replay of [energy environments](/content/environments.md) in combination with a
+  - an energy harvesting-component called [virtual power source](/content/virtual_source.md) to supply power to the targets (optional)
+- record 100 kHz power traces with separate I & V (optional)
+- timestamping with sub 1us accuracy across the testbed
+- recording of target-GPIO with up to 1 MHz and 9 / 12 Channels (optional)
 - decoding of UART at configurable baud rate (optional)
-- emulation of [energy environments](/content/environments.md) (optional)
-- 100 kHz power traces with I & V (optional)
-- timestamps with sub 1us accuracy
+- patching of node-ID in target-firmware (optional)
 - embedded logs, including an extensive warning-system that supervises & diagnoses every critical element during operation
 - tooling in and around the system (batteries included)
 

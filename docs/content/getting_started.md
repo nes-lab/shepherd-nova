@@ -73,7 +73,7 @@ To give you some ideas:
 - each target could be put in their own group and receive a custom environment, firmware and set of tracers
 - this programmatic way makes it easy to run a parameter sweep via a range of experiments
 
-## A more advanced Example
+### A more advanced Example
 
 To give you some additional common configuration options we have a look at a second, slightly more complex, experiment:
 
