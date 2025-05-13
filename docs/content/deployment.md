@@ -1,6 +1,6 @@
 # Instance at TU Dresden
 
-```{caution}
+```{attention}
 WORK IN PROGRESS
 ```
 

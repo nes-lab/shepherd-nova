@@ -16,7 +16,7 @@ You have the option to not have your e-mail address stored on the testbed-server
 
 To access the testbed with your token you just add it to your config:
 
-```{caution}
+```{attention}
 TODO: show how to use a token safely via
 
 - env-var,

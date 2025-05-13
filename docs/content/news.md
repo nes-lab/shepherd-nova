@@ -1,6 +1,6 @@
 # News and upcoming Events
 
-```{caution}
+```{attention}
 WORK IN PROGRESS
 ```
 

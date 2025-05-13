@@ -134,7 +134,7 @@ For non-consecutive IDs the selection can be specified via the list-notation `[1
 You can also see, that **no tracer** was configured here.
 This is a rare, but still valid configuration-option.
 
-```{caution}
+```{attention}
 TODO:
 - Explain were to find existing content like eenvs, virtual sources,
 - introduce testbed with an even simpler hello-world?
@@ -167,7 +167,7 @@ This pin is actively used for UART-Rx here.
 The testbed-client included in `shepherd-core` can be used to connect with the testbed-server remotely.
 With an active connection the experiments get more deeply validated, also considering the current structure of the testbed.
 
-```{caution}
+```{attention}
 TODO: add codesnippet and CLI-call to submit an experiment.
 ```
 
@@ -182,7 +182,7 @@ Each Observer generates a hdf5-file that can be later downloaded.
 
 ## Getting the Data
 
-```{caution}
+```{attention}
 TODO: add codesnippet and CLI-call to download an experiment.
 ```
 
@@ -191,6 +191,6 @@ TODO: add codesnippet and CLI-call to download an experiment.
 `Shepherd-data` offers a powerful CLI-interface that makes accessing the data inside the `hdf5`-files easy.
 It is possible to extract data & logs, calculate metadata and generate plots.
 
-```{caution}
+```{attention}
 TODO: show access via python script and CLI
 ```

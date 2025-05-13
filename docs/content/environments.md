@@ -26,7 +26,7 @@ So the trace with 3 V and 50 mA is selectable by name `eenv_static_3000mV_50mA_3
 
 This sections contains artificial environments, beginning with on-off-patterns and ending with more complex simulated solar harvests.
 
-```{caution}
+```{attention}
 WORK IN PROGRESS
 ```
 
@@ -39,6 +39,6 @@ The output-voltage for the target will directly react to the recording for truly
 
 Traces recorded with the shepherd harvester are currently based on the [published data](https://zenodo.org/records/6383042) of a prior paper.
 
-```{caution}
+```{attention}
 WORK IN PROGRESS
 ```
