@@ -1,5 +1,5 @@
 [project]
-name = "Shepherd-Nova"
+name = "shepherd-nova"
 version = "0.1.0"
 description = "Public instance of the Shepherd Testbed"
 requires-python = ">=3.12"

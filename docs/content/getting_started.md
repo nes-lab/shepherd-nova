@@ -32,7 +32,7 @@ In this case we use pip:
 pip3 install shepherd-data -U
 ```
 
-## Creating an Experiment
+## Defining an Experiment
 
 Configurations are done with the help of Pydantic datamodels.
 Most fields have sensible or neutral default values that can be omitted when designing an experiment.
@@ -162,7 +162,7 @@ Code for the nRF52-DK may use P0.21 for reset.
 This pin is actively used for UART-Rx here.
 ```
 
-## Starting an Experiment
+## Scheduling an Experiment
 
 The testbed-client included in `shepherd-core` can be used to connect with the testbed-server remotely.
 With an active connection the experiments get more deeply validated, also considering the current structure of the testbed.

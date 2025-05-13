@@ -51,7 +51,7 @@ html_theme_options = {
 
 html_title = project
 
-html_baseurl = "https://nes-lab.github.io/Shepherd-Nova/"
+html_baseurl = "https://nes-lab.github.io/shepherd-nova/"
 html_permalinks_icon = "<span>#</span>"
 html_static_path = ["_static"]
 html_extra_path = ["robots.txt"]

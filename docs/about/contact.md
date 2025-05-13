@@ -23,5 +23,5 @@ Helmholtzstrasse 18
 ## Team
 
 - <testbed@nes-lab.org>, main account for handling testbed-related subjects
-- [Ingmar Splitt](https://nes-lab.org/ingmar-splitt/), Researcher & Main-Developer, NES Lab
+- [Ingmar Splitt](https://nes-lab.org/ingmar-splitt/), Research Engineer & Main-Developer, NES Lab
 - [Marco Zimmerling](https://nes-lab.org/marco-zimmerling/), Professor & Group Leader, NES Lab
