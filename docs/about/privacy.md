@@ -51,7 +51,7 @@ The legal basis for data processing for the above-mentioned purposes is Art. 6 U
 
 ## How long is personal data stored?
 
-We reserve the right to disable inactive accounts after 6 month and delete the account in the following clean-up-cycle, no later than 12 months after deactivation.
+We reserve the right to disable inactive accounts after 18 month and delete the account in the following clean-up-cycle, no later than 6 months after deactivation.
 
 ## Will personal data be transferred to third parties?
 
