@@ -15,9 +15,13 @@ For now (Mai 2025) the testbed was reshaped to mimic an elongated multihop mesh-
 
 Below is a screenshot of the [Campus-Navigator](https://navigator.tu-dresden.de/etplan/bar/02) with marked node-positions.
 
-![cfaed floor with marked node-positions](../media/cfaed_floorplan_current.png)
+```{figure} /media/cfaed_floorplan_current.png
+:align: center
+:alt: CFAED floor with marked node-positions
 
+**CFAED floor with marked node-positions**. 
 Most horizontal walls are concrete, while the walls between offices are drywall.
+```
 
 ## Link-Matrix
 
@@ -53,7 +57,13 @@ Currently new hardware is produced, validated and calibrated.
 
 With the official public release of the testbed in June 2025 it is planned to roll out an extended layout:
 
-![cfaed floor with marked future node-positions](../media/cfaed_floorplan_with_nodes.png)
+```{figure} /media/cfaed_floorplan_with_nodes.png
+:align: center
+:alt: CFAED floor with marked future node-positions
+
+**floor with marked future node-positions**. 
+Most horizontal walls are concrete, while the walls between offices are drywall.
+```
 
 ### What does that mean for the user?
 

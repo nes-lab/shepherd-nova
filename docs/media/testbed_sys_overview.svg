@@ -1,0 +1,751 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="115.59373mm"
+   height="100.39582mm"
+   viewBox="0 0 115.59374 100.39581"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (ebf0e94, 2025-05-08)"
+   sodipodi:docname="testbed_sys_overview.svg"
+   inkscape:export-filename="testbed_sys_overview.png"
+   inkscape:export-xdpi="131.84106"
+   inkscape:export-ydpi="131.84106"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="true"
+     inkscape:zoom="1.5051055"
+     inkscape:cx="213.27409"
+     inkscape:cy="176.39959"
+     inkscape:window-width="2035"
+     inkscape:window-height="1359"
+     inkscape:window-x="709"
+     inkscape:window-y="694"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       id="grid1"
+       units="px"
+       originx="-51.343754"
+       originy="-60.604164"
+       spacingx="0.26458333"
+       spacingy="0.26458334"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       dotted="false"
+       gridanglex="30"
+       gridanglez="30"
+       visible="true" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="Triangle"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Triangle-1"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-8" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Triangle-1-2"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-8-6" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Triangle-1-0-6"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-8-3-4" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Triangle-1-2-6"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-8-6-1" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Triangle-1-0-6-5"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-8-3-4-5" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-51.343754,-60.604165)">
+    <rect
+       style="fill:#e6e6e6;fill-opacity:1;stroke:#b4b4b4;stroke-width:0.499999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect6"
+       width="47.624992"
+       height="30.42709"
+       x="51.593754"
+       y="60.854164" />
+    <rect
+       style="fill:#e6e6e6;fill-opacity:1;stroke:#c8c8c8;stroke-width:0.499999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect6-2-0"
+       width="82.048744"
+       height="41.010452"
+       x="58.169704"
+       y="116.02078" />
+    <rect
+       style="fill:#007481;fill-opacity:0.321569;stroke:#007481;stroke-width:0.5;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect2"
+       width="42.333332"
+       height="7.9375024"
+       x="54.239578"
+       y="75.406258" />
+    <rect
+       style="fill:#e6e6e6;fill-opacity:1;stroke:#b4b4b4;stroke-width:0.499999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect5"
+       width="26.458323"
+       height="8.187501"
+       x="140.22916"
+       y="64.572922" />
+    <rect
+       style="fill:#007481;fill-opacity:0.321569;stroke:#007481;stroke-width:0.499999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect7"
+       width="42.333324"
+       height="7.9374981"
+       x="54.239578"
+       y="64.822922" />
+    <path
+       style="fill:none;stroke:#900000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Triangle)"
+       d="m 96.572902,70.114588 42.597918,10e-7"
+       id="path8"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#900000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Triangle-1)"
+       d="m 140.22915,67.468755 -42.597906,-10e-7"
+       id="path8-9"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.46944px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="120.1208"
+       y="63.500004"
+       id="text8"><tspan
+         sodipodi:role="line"
+         id="tspan8"
+         style="font-size:2.46944px;text-align:center;text-anchor:middle;fill:#900000;fill-opacity:1;stroke-width:0.264583"
+         x="120.1208"
+         y="63.500004">Harvesting data, firmware,</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:2.46944px;text-align:center;text-anchor:middle;fill:#900000;fill-opacity:1;stroke-width:0.264583"
+         x="120.1208"
+         y="66.586807"
+         id="tspan9">topology, configuration</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.46944px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="105.26923"
+       y="72.64975"
+       id="text10"><tspan
+         sodipodi:role="line"
+         id="tspan10"
+         style="font-size:2.46944px;fill:#900000;fill-opacity:1;stroke-width:0.264583"
+         x="105.26923"
+         y="72.64975">Power, serial, GPIO logs</tspan></text>
+    <rect
+       style="fill:#e6e6e6;fill-opacity:1;stroke:#b4b4b4;stroke-width:0.499999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect7-7-6"
+       width="39.715416"
+       height="7.937499"
+       x="58.419704"
+       y="102.54161" />
+    <rect
+       style="fill:#e6e6e6;fill-opacity:1;stroke:#b4b4b4;stroke-width:0.499999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect7-7-6-5"
+       width="63.499996"
+       height="7.9767723"
+       x="103.18749"
+       y="89.919067" />
+    <rect
+       style="fill:#e6e6e6;fill-opacity:1;stroke:#b4b4b4;stroke-width:0.499999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect7-7-6-5-3"
+       width="25.135412"
+       height="7.976769"
+       x="111.12499"
+       y="76.689903" />
+    <rect
+       style="fill:#e6e6e6;fill-opacity:1;stroke:#b4b4b4;stroke-width:0.499999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect7-7-6-5-3-8"
+       width="26.45833"
+       height="7.976769"
+       x="140.22916"
+       y="76.689903" />
+    <path
+       style="fill:none;stroke:#900000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 99.218744,79.375005 h 9.260416 v 10.583334"
+       id="path1"
+       sodipodi:nodetypes="ccc" />
+    <path
+       style="fill:none;stroke:#900000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 123.03124,84.666672 v 5.291667"
+       id="path3" />
+    <path
+       style="fill:none;stroke:#900000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 154.78124,84.666672 v 5.291667"
+       id="path3-1" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="56.387264"
+       y="80.567703"
+       id="text1"><tspan
+         sodipodi:role="line"
+         id="tspan1"
+         style="stroke-width:0.264583"
+         x="56.387264"
+         y="80.567703">Shared filesystem</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="53.433437"
+       y="89.123245"
+       id="text2-0"><tspan
+         sodipodi:role="line"
+         id="tspan2-6"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+         x="53.433437"
+         y="89.123245">Testbed server</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="56.213631"
+       y="69.932686"
+       id="text3"><tspan
+         sodipodi:role="line"
+         id="tspan3"
+         style="stroke-width:0.264583"
+         x="56.213631"
+         y="69.932686">Server application</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="148.44984"
+       y="70.173561"
+       id="text4"><tspan
+         sodipodi:role="line"
+         id="tspan4"
+         style="stroke-width:0.264583"
+         x="148.44984"
+         y="70.173561">User</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="84.393822"
+       y="142.09889"
+       id="text1-4-5"><tspan
+         sodipodi:role="line"
+         id="tspan1-3-0"
+         style="stroke-width:0.264583"
+         x="84.393822"
+         y="142.09889">Shared filesystem</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="64.517532"
+       y="150.41982"
+       id="text1-4-0-4"><tspan
+         sodipodi:role="line"
+         id="tspan1-3-6-8"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+         x="64.517532"
+         y="150.41982">Observer</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="88.794594"
+       y="121.31565"
+       id="text2-3-8-1"><tspan
+         sodipodi:role="line"
+         id="tspan2-7-9-7"
+         style="stroke-width:0.264583"
+         x="88.794594"
+         y="121.31565">Virtual source</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="89.995552"
+       y="131.4173"
+       id="text2-3-8-2-7"><tspan
+         sodipodi:role="line"
+         id="tspan2-7-9-9-2"
+         style="stroke-width:0.264583"
+         x="89.995552"
+         y="131.4173">Programmer</tspan></text>
+    <rect
+       style="fill:#e6e6e6;fill-opacity:1;stroke:#b4b4b4;stroke-width:0.499999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect7-7-6-7"
+       width="39.715416"
+       height="7.937499"
+       x="100.75303"
+       y="102.54161" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="118.36694"
+       y="95.487717"
+       id="text3-9-6-2"><tspan
+         sodipodi:role="line"
+         id="tspan3-1-1-9"
+         style="stroke-width:0.264583"
+         x="118.36694"
+         y="95.487717">Ethernet switch</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="112.42931"
+       y="82.258553"
+       id="text3-9-6-2-0"><tspan
+         sodipodi:role="line"
+         id="tspan3-1-1-9-9"
+         style="stroke-width:0.264583"
+         x="112.42931"
+         y="82.258553">File server</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="141.85077"
+       y="82.258553"
+       id="text3-9-6-2-0-8"><tspan
+         sodipodi:role="line"
+         id="tspan3-1-1-9-9-6"
+         style="stroke-width:0.264583"
+         x="141.85077"
+         y="82.258553">PTP server</tspan></text>
+    <rect
+       style="fill:#e6e6e6;fill-opacity:1;stroke:#c8c8c8;stroke-width:0.499999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect6-2-0-9"
+       width="82.048744"
+       height="41.010452"
+       x="57.096783"
+       y="117.0937" />
+    <rect
+       style="fill:#e6e6e6;fill-opacity:1;stroke:#b4b4b4;stroke-width:0.499999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect7-7-6-9"
+       width="39.715416"
+       height="7.937499"
+       x="57.096783"
+       y="103.86453" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="81.747993"
+       y="144.74471"
+       id="text1-4-5-1"><tspan
+         sodipodi:role="line"
+         id="tspan1-3-0-7"
+         style="stroke-width:0.264583"
+         x="81.747993"
+         y="144.74471">Shared filesystem</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="61.871716"
+       y="153.06563"
+       id="text1-4-0-4-7"><tspan
+         sodipodi:role="line"
+         id="tspan1-3-6-8-1"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+         x="61.871716"
+         y="153.06563">Observer</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="86.148758"
+       y="123.96147"
+       id="text2-3-8-1-1"><tspan
+         sodipodi:role="line"
+         id="tspan2-7-9-7-5"
+         style="stroke-width:0.264583"
+         x="86.148758"
+         y="123.96147">Virtual source</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="87.349724"
+       y="134.06311"
+       id="text2-3-8-2-7-9"><tspan
+         sodipodi:role="line"
+         id="tspan2-7-9-9-2-7"
+         style="stroke-width:0.264583"
+         x="87.349724"
+         y="134.06311">Programmer</tspan></text>
+    <rect
+       style="fill:#e6e6e6;fill-opacity:1;stroke:#b4b4b4;stroke-width:0.499999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect7-7-6-7-7"
+       width="39.715416"
+       height="7.937499"
+       x="99.430099"
+       y="103.86453" />
+    <rect
+       style="fill:#e6e6e6;fill-opacity:1;stroke:#c8c8c8;stroke-width:0.499999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect6-2-0-94"
+       width="82.048744"
+       height="41.010452"
+       x="55.773876"
+       y="118.41661" />
+    <rect
+       style="fill:#e6e6e6;fill-opacity:1;stroke:#b4b4b4;stroke-width:0.499999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect7-7-6-93"
+       width="39.715416"
+       height="7.937499"
+       x="55.773869"
+       y="105.18745" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="79.116112"
+       y="147.39058"
+       id="text1-4-5-9"><tspan
+         sodipodi:role="line"
+         id="tspan1-3-0-0"
+         style="stroke-width:0.264583"
+         x="79.116112"
+         y="147.39058">Shared filesystem</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="59.239826"
+       y="155.7115"
+       id="text1-4-0-4-8"><tspan
+         sodipodi:role="line"
+         id="tspan1-3-6-8-8"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+         x="59.239826"
+         y="155.7115">Observer</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="83.516884"
+       y="126.60734"
+       id="text2-3-8-1-5"><tspan
+         sodipodi:role="line"
+         id="tspan2-7-9-7-0"
+         style="stroke-width:0.264583"
+         x="83.516884"
+         y="126.60734">Virtual source</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="84.717842"
+       y="136.70898"
+       id="text2-3-8-2-7-96"><tspan
+         sodipodi:role="line"
+         id="tspan2-7-9-9-2-3"
+         style="stroke-width:0.264583"
+         x="84.717842"
+         y="136.70898">Programmer</tspan></text>
+    <rect
+       style="fill:#e6e6e6;fill-opacity:1;stroke:#b4b4b4;stroke-width:0.499999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect7-7-6-7-1"
+       width="39.715416"
+       height="7.937499"
+       x="98.107193"
+       y="105.18745" />
+    <rect
+       style="fill:#e6e6e6;fill-opacity:1;stroke:#b4b4b4;stroke-width:0.499999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect6-2-0-8"
+       width="82.048744"
+       height="41.010452"
+       x="54.450947"
+       y="119.73953" />
+    <rect
+       style="fill:#007481;fill-opacity:0.321569;stroke:#007481;stroke-width:0.5;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect2-1-7-1"
+       width="76.757072"
+       height="7.9375076"
+       x="57.096783"
+       y="144.87494" />
+    <rect
+       style="fill:#007481;fill-opacity:0.321569;stroke:#007481;stroke-width:0.499999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect8-5-7-2-0"
+       width="76.757072"
+       height="7.9375339"
+       x="57.096783"
+       y="123.70825" />
+    <rect
+       style="fill:#007481;fill-opacity:0.321569;stroke:#007481;stroke-width:0.499999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect8-5-7-3-2-3"
+       width="76.757072"
+       height="7.9375167"
+       x="57.096783"
+       y="134.2916" />
+    <rect
+       style="fill:#e6e6e6;fill-opacity:1;stroke:#b4b4b4;stroke-width:0.499999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect7-7-6-0"
+       width="39.715416"
+       height="7.937499"
+       x="54.450939"
+       y="106.51038" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.46944px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="56.566784"
+       y="117.86817"
+       id="text11-1"><tspan
+         sodipodi:role="line"
+         id="tspan11-5"
+         style="font-size:2.46944px;fill:#900000;fill-opacity:1;stroke-width:0.264583"
+         x="56.566784"
+         y="117.86817">UART, GPIO</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.46944px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="75.676888"
+       y="117.77679"
+       id="text11-7-9"><tspan
+         sodipodi:role="line"
+         id="tspan11-8-4"
+         style="font-size:2.46944px;fill:#900000;fill-opacity:1;stroke-width:0.264583"
+         x="75.676888"
+         y="117.77679">Supply voltage</tspan></text>
+    <path
+       style="fill:none;stroke:#900000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Triangle-1-2)"
+       d="m 73.528863,114.44787 v 4.23334"
+       id="path11-9"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#900000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Triangle-1-0-6)"
+       d="m 75.116353,119.47496 v -4.23334"
+       id="path11-1-0"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="76.456322"
+       y="150.03639"
+       id="text1-4-5-4"><tspan
+         sodipodi:role="line"
+         id="tspan1-3-0-4"
+         style="stroke-width:0.264583"
+         x="76.456322"
+         y="150.03639">Shared filesystem</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="56.580044"
+       y="158.35732"
+       id="text1-4-0-4-4"><tspan
+         sodipodi:role="line"
+         id="tspan1-3-6-8-4"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+         x="56.580044"
+         y="158.35732">Observer</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="80.857094"
+       y="129.25314"
+       id="text2-3-8-1-7"><tspan
+         sodipodi:role="line"
+         id="tspan2-7-9-7-6"
+         style="stroke-width:0.264583"
+         x="80.857094"
+         y="129.25314">Virtual source</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="82.058052"
+       y="139.3548"
+       id="text2-3-8-2-7-3"><tspan
+         sodipodi:role="line"
+         id="tspan2-7-9-9-2-1"
+         style="stroke-width:0.264583"
+         x="82.058052"
+         y="139.3548">Programmer</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="67.707497"
+       y="111.58086"
+       id="text3-9-6-75"><tspan
+         sodipodi:role="line"
+         id="tspan3-1-1-96"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+         x="67.707497"
+         y="111.58086">Target</tspan></text>
+    <rect
+       style="fill:#e6e6e6;fill-opacity:1;stroke:#b4b4b4;stroke-width:0.499999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect7-7-6-7-2"
+       width="39.715416"
+       height="7.937499"
+       x="96.81218"
+       y="106.51038" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.46944px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583;opacity:0.47369436"
+       x="98.928032"
+       y="117.86817"
+       id="text11-1-6"><tspan
+         sodipodi:role="line"
+         id="tspan11-5-5"
+         style="font-size:2.46944px;fill:#900000;fill-opacity:1;stroke-width:0.264583"
+         x="98.928032"
+         y="117.86817">UART, GPIO</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.46944px;line-height:1.25;font-family:sans-serif;fill:#808080;fill-opacity:1;stroke-width:0.264583;opacity:0.47369436"
+       x="118.03814"
+       y="117.77679"
+       id="text11-7-9-6"><tspan
+         sodipodi:role="line"
+         id="tspan11-8-4-9"
+         style="font-size:2.46944px;fill:#900000;fill-opacity:1;stroke-width:0.264583"
+         x="118.03814"
+         y="117.77679">Supply voltage</tspan></text>
+    <path
+       style="fill:none;stroke:#900000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Triangle-1-2-6);opacity:0.47369436"
+       d="m 115.89011,114.44787 v 4.23334"
+       id="path11-9-3"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#900000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Triangle-1-0-6-5);opacity:0.47369436"
+       d="m 117.4776,119.47496 v -4.23334"
+       id="path11-1-0-7"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="110.06876"
+       y="111.58086"
+       id="text3-9-6-4-17"><tspan
+         sodipodi:role="line"
+         id="tspan3-1-1-5-8"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#808080;fill-opacity:1;stroke-width:0.264583"
+         x="110.06876"
+         y="111.58086">Target</tspan></text>
+    <path
+       style="fill:none;stroke:#900000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="M 154.78124,97.895843 V 148.16667 H 136.26041"
+       id="path2"
+       sodipodi:nodetypes="ccc" />
+    <path
+       style="fill:none;stroke:#900000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="M 154.78124,145.52084 H 137.58333"
+       id="path4" />
+    <path
+       style="fill:none;stroke:#900000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="m 154.78124,142.87501 h -15.875"
+       id="path5" />
+    <path
+       style="fill:none;stroke:#900000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="M 154.78124,140.22917 H 140.22916"
+       id="path6" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="-120.49317"
+       y="158.34639"
+       id="text6"
+       transform="rotate(-90)"><tspan
+         sodipodi:role="line"
+         id="tspan6"
+         style="font-size:3.175px;fill:#900000;fill-opacity:1;stroke-width:0.264583"
+         x="-120.49317"
+         y="158.34639">Ethernet, PTP</tspan></text>
+  </g>
+</svg>
