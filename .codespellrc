@@ -4,7 +4,7 @@ builtin = clear,rare,informal,usage,code,en-GB_to_en-US
 
 skip = *.svg,
 
-ignore-words-list = fram
+ignore-words-list = fram,master,theses
 
 # options without argument
 check-filenames =

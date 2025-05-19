@@ -15,6 +15,8 @@
    ./content/virtual_source.md
    ./content/webapi.md
 
+   ./content/infrastructure.md
+
    ./content/faq.md
    ./content/help_me_help_you.md
 

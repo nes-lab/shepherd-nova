@@ -5,7 +5,7 @@ This section will guide you through the characteristics to help you make a choic
 
 ```{note}
 We plan on extending this collection further in the near future.
-If you have wishes, ideas or actual recordings please don't hesitate [contacting](/about/contact.md) us.
+If you have ideas, wishes or actual recordings please don't hesitate [contacting](/about/contact.md) us.
 ```
 
 ## Static Environments

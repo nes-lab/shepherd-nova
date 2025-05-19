@@ -1,7 +1,7 @@
 # Web-API
 
 ```{attention}
-WORK IN PROGRESS
+WORK IN PROGRESS, maybe move to FAQ and keep it short. It might be more helpful to introduce the targets instead.
 ```
 
 The API is based on [fastapi](https://github.com/fastapi/fastapi) and documents itself.

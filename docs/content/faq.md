@@ -13,6 +13,12 @@ If critical work has to be done, we reserve the right to cancel currently active
 Beside [maintenance](#maintenance) and [quota](/content/access.md#quota) there are no further limitations.
 The testbed is usable 24-7 and a scheduled task has exclusive access to all observers.
 
+## Trusting the Results
+
+We don't expect you to trust the testbed right away.
+Create an account, do some experiments, get some impressions.
+We tried to document our view and measures concerning trust in the [section about infrastructure](/content/infrastructure.md#building-a-chain-of-trust).
+
 ## Lifetime of Data
 
 We aim to offer a guaranteed storage for the result data of at least 15 days.
@@ -21,4 +27,4 @@ Depending on the capacity of the data-server, old results will be deleted simila
 
 ## Contributions
 
-Feedback is more than welcome during that initial phase. Also welcome are reusable & useful scripts or firmware you developed and want to donate.
+Feedback is more than welcome during that initial phase. Reusable & useful scripts or firmware you developed and want to donate is also welcome.

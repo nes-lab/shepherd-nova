@@ -19,7 +19,7 @@ Below is a screenshot of the [Campus-Navigator](https://navigator.tu-dresden.de/
 :align: center
 :alt: CFAED floor with marked node-positions
 
-**CFAED floor with marked node-positions**. 
+**CFAED floor with marked node-positions**.
 Most horizontal walls are concrete, while the walls between offices are drywall.
 ```
 
@@ -61,7 +61,7 @@ With the official public release of the testbed in June 2025 it is planned to ro
 :align: center
 :alt: CFAED floor with marked future node-positions
 
-**floor with marked future node-positions**. 
+**floor with marked future node-positions**.
 Most horizontal walls are concrete, while the walls between offices are drywall.
 ```
 
