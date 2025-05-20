@@ -25,6 +25,16 @@ We aim to offer a guaranteed storage for the result data of at least 15 days.
 The maximum storage duration is currently set to 6 month.
 Depending on the capacity of the data-server, old results will be deleted similar to a FIFO.
 
+## Web-API
+
+The API is based on [fastapi](https://github.com/fastapi/fastapi) and documents itself.
+The included redoc-website is interactive.
+It allows to log in and interact with actual data.
+
+Redoc-Documentation: <https://shepherd.cfaed.tu-dresden.de:8000/>
+
+Sources: <https://github.com/orgua/shepherd_webservice>
+
 ## Contributions
 
 Feedback is more than welcome during that initial phase. Reusable & useful scripts or firmware you developed and want to donate is also welcome.

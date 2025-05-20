@@ -161,7 +161,7 @@ For more insight during the actual emulation the user can leverage the following
 - configurations with static output voltage (buck-converter) allow to record the voltage levels and output-current of the virtual storage capacitor instead
 
 ```{seealso}
-More details can be found in the [section for the virtual power source](/content/virtual_source.md).
+More details can be found in the [section covering the virtual power source](/content/virtual_source.md).
 ```
 
 ## Calibration

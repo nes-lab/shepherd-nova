@@ -41,4 +41,5 @@ Traces recorded with the shepherd harvester are currently based on the [publishe
 
 ```{attention}
 WORK IN PROGRESS
+TODO: differentiate single env to array of envs (=domain?)
 ```
