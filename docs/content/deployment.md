@@ -27,7 +27,8 @@ Most horizontal walls are concrete, while the walls between offices are drywall.
 
 The link-matrix of the testbed looks like that:
 
-```
+```{code-block}
+:caption: [TrafficBench](https://github.com/nes-lab/TrafficBench) RF-survey from 2025-03-11, all nodes, values in dBm
 Tx⟍Rx     1     2     3     4     5     6     7     8     9    10    11
      +-----------------------------------------------------------------
    1 |        -43   -57   -80   -62   -73   -86   -84
@@ -42,14 +43,6 @@ Tx⟍Rx     1     2     3     4     5     6     7     8     9    10    11
   10 |                                      -72   -81   -61         -81
   11 |                                                  -75   -80
 ```
-
-**Notes**:
-
-- values are in dBm
-- data is from 2025-03-11
-- P_TX = 8 dBm
-- [TrafficBench](https://github.com/nes-lab/TrafficBench) was used to make the rf-survey
-- 8 min runtime, scheduler includes all nodes
 
 ## Changes in near Future
 

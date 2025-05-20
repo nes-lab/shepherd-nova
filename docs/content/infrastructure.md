@@ -34,11 +34,13 @@ TODO: add link to paper
 
 ## Building a Chain of Trust
 
-For the design of the system we are aiming for complete transparency and openness.
+For the design of the system we aimed for complete transparency and openness.
 But how can the user be sure that the testbed functioned as expected during an experiment?
 The following subsections are building on top of the topics already presented in the paper.
 We will describe our extensive warning-system which offers various checks.
 The goal was to supervise and self-diagnose every critical component during operation.
+
+**If something unplanned or bad happens, you will most likely hear about it.**
 
 Extensive logs are usually included in each result-file.
 Please note, that it's not needed to comb through every entry to validate an experiment.
