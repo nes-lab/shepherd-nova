@@ -1,6 +1,6 @@
 # Getting started
 
-The testbed can be used via the [public web-API](./webapi).
+The testbed can be used via the [public web-API](/content/faq.md#web-api).
 For easier access we provide a testbed-client and additional tooling written in Python.
 This section will describe a typical workflow.
 
