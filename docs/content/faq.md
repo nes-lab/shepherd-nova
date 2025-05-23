@@ -33,7 +33,7 @@ It allows to log in and interact with actual data.
 
 Redoc-Documentation: <https://shepherd.cfaed.tu-dresden.de:8000/>
 
-Sources: <https://github.com/orgua/shepherd_webservice>
+Sources: <https://github.com/nes-lab/shepherd-webapi>
 
 ## Contributions
 

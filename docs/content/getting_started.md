@@ -12,20 +12,19 @@ We are also thankful for [bugreports](/content/help_me_help_you).
 ## Installing the Tools
 
 The tooling for the testbed is bundled in a package called `shepherd-data`.
-Sources are [hosted on GitHub](https://github.com/orgua/shepherd-datalib) and the package is [distributed via PyPI](https://pypi.org/project/shepherd-data/).
+Sources are [hosted on GitHub](https://github.com/nes-lab/shepherd-tools) and the package is [distributed via PyPI](https://pypi.org/project/shepherd-data/).
 
-[![PyPiVersion](https://img.shields.io/pypi/v/shepherd_data.svg)](https://pypi.org/project/shepherd_data)
-[![image](https://img.shields.io/pypi/pyversions/shepherd_data.svg)](https://pypi.python.org/pypi/shepherd-data)
+[![PyPI-Version](https://img.shields.io/pypi/v/shepherd_data.svg)](https://pypi.org/project/shepherd_data)
 
 It contains
 
 - the testbed-client,
 - data-models for configuring an experiment,
-- various functionality for analyzing the resulting hdf5-files
+- various functionality for analyzing the resulting hdf5-files, i.e. extraction, down-sampling, plotting
 - a command-line interface and
 - much more (out of scope for this guide)
 
-You can install the tools by using the package-manager of your choice.
+You can install the user-tools by using the package-manager of your choice.
 In this case we use pip:
 
 ```Shell
@@ -41,8 +40,8 @@ Users of FlockLab should quickly feel at home, as shepherds options are largely 
 
 ```{tip}
 1) If you use an IDE and have the tooling installed, you can easily jump to the source of the data-class and see its defaults (i.e. `ctrl`-key + click on the class).
-2) This is just ONE way of doing things. Configuration could be also done in [YAML-files](https://github.com/orgua/shepherd-datalib/blob/main/shepherd_core/examples/experiment_from_yaml.yaml) or in JSON via the open web-API in your language of choice.
-3) While we work on a proper in-depth documentation, you can [access the data-models online](https://github.com/orgua/shepherd-datalib/tree/main/shepherd_core/shepherd_core/data_models)
+2) This is just ONE way of doing things. Configuration could be also done in [YAML-files](https://github.com/nes-lab/shepherd-tools/blob/main/shepherd_core/examples/experiment_from_yaml.yaml) or in JSON via the open web-API in your language of choice.
+3) While we work on a proper in-depth documentation, you can [access the data-models online](https://github.com/nes-lab/shepherd-tools/tree/main/shepherd_core/shepherd_core/data_models)
 ```
 
 Let's have a look at a minimal example that reuses an existing firmware:
@@ -126,7 +125,7 @@ That's why the rate is limit to 460800 baud.
 ```{tip}
 If you wish to use higher baudrates with short burst-messages, you can use the GPIO-Tracer and decode UART later via the provided waveform-decoder.
 The decoder can estimate serial configuration (baudrate, parity, stop-bits, ..) and produce a timestamped symbol-stream that can also be reduced to timestamped lines and whole text-blocks.
-See [this example](https://github.com/orgua/shepherd-datalib/blob/main/shepherd_core/examples/uart_decode_waveform.py) for details.
+See [this example](https://github.com/nes-lab/shepherd-tools/blob/main/shepherd_core/examples/uart_decode_waveform.py) for details.
 ```
 
 Lastly the second example defines an **additional target-config** that selects a small set of two targets.
@@ -144,22 +143,26 @@ TODO:
 
 While the testbed offers two target ports per observer, only one port is occupied at the moment.
 The target is fully open source and features an nRF52 and msp430.
-A [separate target-repository](https://github.com/orgua/shepherd-targets/tree/main?tab=readme-ov-file#nrf52-with-msp430fr-as-fram) holds more information:
+A [separate targets-repository](https://github.com/nes-lab/shepherd-targets/tree/main?tab=readme-ov-file#nrf52-with-msp430fr-as-fram) holds more information:
 
 - full feature-list and pictures
 - schematics and other design-files
 - firmware-examples (compiled binaries are auto-generated and included in each release)
 
-The important part for adapting a firmware is the [table of shared pins](https://github.com/orgua/shepherd-targets/tree/main/hardware/shepherd_nRF_FRAM_Target_v1.3e#nrf52--msp430-fram-target-v13e) and [a template](https://github.com/orgua/shepherd-targets/tree/main/nrf52_demo_rf/src/shepherd_node_id.c) for patching the node ID.
+The important part for adapting a firmware is the [table of shared pins](https://github.com/nes-lab/shepherd-targets/tree/main/hardware/shepherd_nRF_FRAM_Target_v1.3e#nrf52--msp430-fram-target-v13e) and [a template](https://github.com/nes-lab/shepherd-targets/tree/main/nrf52_demo_rf/src/shepherd_node_id.c) for patching the node ID.
 
 When an `elf`-firmware contains a ``SHEPHERD_NODE_ID``, the variable will be patched with the actual target-ID before running the experiment.
-See the proposed [c-file](https://github.com/orgua/shepherd-targets/tree/main/nrf52_demo_rf/src/shepherd_node_id.c) for more information.
+See the proposed [c-file](https://github.com/nes-lab/shepherd-targets/tree/main/nrf52_demo_rf/src/shepherd_node_id.c) for more information.
 
 ```{note}
 The nRF has no outer reset line!
 Configuring one could keep the MCU in permanent reset.
 Code for the nRF52-DK may use P0.21 for reset.
 This pin is actively used for UART-Rx here.
+```
+
+```{attention}
+TODO: description of targets now has its own sub-page.
 ```
 
 ## Scheduling an Experiment
@@ -192,5 +195,5 @@ TODO: add codesnippet and CLI-call to download an experiment.
 It is possible to extract data & logs, calculate metadata and generate plots.
 
 ```{attention}
-TODO: show access via python script and CLI
+TODO: show access via python script and CLI, link to main doc for API
 ```

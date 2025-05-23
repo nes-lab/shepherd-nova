@@ -8,7 +8,7 @@ Public access is scheduled to launch during the MobiSys 2025.
 The testbed offers:
 
 - [10+ observer-nodes](/content/deployment.md) for distributed operation
-- [nRF52-Targets](https://github.com/orgua/shepherd-targets/) with additional msp430 that can be used as FRAM
+- [nRF52-Targets](https://github.com/nes-lab/shepherd-targets/) with additional msp430 that can be used as FRAM
 - consistently replicate real-world spatio-temporal energy availability across multiple experiments
   - replay of [energy environments](/content/environments.md) in combination with
   - an energy harvesting-component called [virtual power source](/content/virtual_source.md) to supply power to the targets (optional)

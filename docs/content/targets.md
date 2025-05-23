@@ -1,7 +1,10 @@
 # Targets
 
 ```{attention}
-WORK IN PROGRESS - include content from links below
+WORK IN PROGRESS
+- include content from links below,
+- explain neutrality-goal of surrounding HW (msp, switch, translators)
+- show how GPIO is routed simplified.
 ```
 
 ```{note}
@@ -11,7 +14,8 @@ Shepherd Nova has a second (unused) target-port on each observer and is looking 
 ## nRF52 with MSP430FR as FRAM
 
 ```{seealso}
-1) <https://github.com/orgua/shepherd-targets/>
-2) <https://github.com/orgua/shepherd-targets/tree/main/hardware/shepherd_nRF_FRAM_Target_v1.3e>
-3) <https://orgua.github.io/shepherd/user/hardware.html#target-port>
+1) <https://github.com/nes-lab/shepherd-targets/>
+2) <https://github.com/nes-lab/shepherd-targets/tree/main/hardware/shepherd_nRF_FRAM_Target_v1.3e>
+3) <https://nes-lab.github.io/shepherd/user/hardware.html#target-port>
+4) <https://nes-lab.github.io/shepherd/external/readme_targets.html>
 ```

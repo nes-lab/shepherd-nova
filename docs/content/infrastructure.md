@@ -141,8 +141,8 @@ The figure above shows the relative sync between two exemplary observers in the 
 Signals were taken from the chip-select input of the ADC as it is precisely controlled by PRU0 for isochronous timing.
 
 ```{seealso}
-1) Additional information about the PI-controller and an accompanying simulation can be found in the [source-directory](https://github.com/orgua/shepherd/tree/main/software/kernel-module) of the kernel module.
-2) Documentation about the measurement can be found [in the main repo](https://orgua.github.io/shepherd/dev/time_sync_analysis/readme.html).
+1) Additional information about the PI-controller and an accompanying simulation can be found in the [source-directory](https://github.com/nes-lab/shepherd/tree/main/software/kernel-module) of the kernel module.
+2) Documentation about the measurement can be found [in the main repo](https://nes-lab.github.io/shepherd/dev/time_sync_analysis/readme.html).
 ```
 
 ## Virtual Power Source & Harvester
@@ -168,7 +168,7 @@ More details can be found in the [section covering the virtual power source](/co
 
 The analog frontend of each observer is calibrated with a Keithley 2604B SMU to allow precise measurements.
 Calibration data is stored on an EEPROM on the same PCB as the frontend and will be copied to the result-file during an experiment.
-Additionally, the [data is stored online](https://github.com/orgua/shepherd_v2_planning/tree/main/doc_testbed/calibration_cape_24b_2023_09) to avoid loss and enable quick lookup.
+Additionally, the [data is stored online](https://github.com/orgua/shepherd-v2-planning/tree/main/doc_testbed/calibration_cape_24b_2023_09) to avoid loss and enable quick lookup.
 During recording the raw values from the ADCs are not altered, but stored as is in the hdf5-file.
 This would allow for later re-calibration and easily correcting the result-files, in case an issue is found with an individual calibration.
 Calibrations made two years apart showed excellent long time stability of the frontend.

@@ -27,9 +27,3 @@ xp = sdm.Experiment(
 )
 xp.to_file("experiment_rf_survey.yaml")
 # end example
-
-# next steps:
-# - copy to server:
-#   scp ./experiment_generic_varX_tbt.yaml user@shepherd.cfaed.tu-dresden.de:/var/shepherd/content/
-# - run with herd-tool:
-#   shepherd-herd --verbose run --attach /var/shepherd/content/experiment_generic_varX_tbt.yaml
