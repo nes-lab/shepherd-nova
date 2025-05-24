@@ -149,10 +149,10 @@ A [separate targets-repository](https://github.com/nes-lab/shepherd-targets/tree
 - schematics and other design-files
 - firmware-examples (compiled binaries are auto-generated and included in each release)
 
-The important part for adapting a firmware is the [table of shared pins](https://github.com/nes-lab/shepherd-targets/tree/main/hardware/shepherd_nRF_FRAM_Target_v1.3e#nrf52--msp430-fram-target-v13e) and [a template](https://github.com/nes-lab/shepherd-targets/tree/main/nrf52_demo_rf/src/shepherd_node_id.c) for patching the node ID.
+The important part for adapting a firmware is the [table of shared pins](https://github.com/nes-lab/shepherd-targets/tree/main/hardware/shepherd_nRF_FRAM_Target_v1.3e#nrf52--msp430-fram-target-v13e) and [a template](https://github.com/nes-lab/shepherd-targets/tree/main/firmware/nrf52_demo_rf/src/shepherd_node_id.c) for patching the node ID.
 
 When an `elf`-firmware contains a ``SHEPHERD_NODE_ID``, the variable will be patched with the actual target-ID before running the experiment.
-See the proposed [c-file](https://github.com/nes-lab/shepherd-targets/tree/main/nrf52_demo_rf/src/shepherd_node_id.c) for more information.
+See the proposed [c-file](https://github.com/nes-lab/shepherd-targets/tree/main/firmware/nrf52_demo_rf/src/shepherd_node_id.c) for more information.
 
 ```{note}
 The nRF has no outer reset line!
