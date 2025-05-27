@@ -42,12 +42,20 @@ html_theme_options = {
     "show_prev_next": True,
     "logo_light": "media/nes_logo.svg",
     "logo_dark": "media/nes_logo.svg",
+    "awesome_external_links": True,
+    # "extra_header_link_icons": {"media/TUD_Logo.svg": "https://cfaed.tu-dresden.de/"},# WRONG
     # "main_nav_links": {"About": "/content/about"},
     # "max_navbar_depth": 2,
     # "show_nav_level": 2,
     # "navigation_depth": 2,
 }
 # https://sphinxawesome.xyz/how-to/options/
+
+# Select a color scheme for light mode
+pygments_style = "friendly"
+# Select a different color scheme for dark mode
+# pygments_style_dark = "friendly"
+# see https://pygments.org/styles/ for more
 
 html_title = project
 
