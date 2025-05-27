@@ -28,6 +28,7 @@
    ./about/contact.md
    ./about/disclaimer.md
    ./about/privacy.md
+   ./about/acknowledgments.md
 
 ..
    Indices and tables
