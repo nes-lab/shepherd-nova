@@ -37,8 +37,8 @@ TODO: add link to paper
 For the design of the system we aimed for complete transparency and openness.
 But how can the user be sure that the testbed functioned as expected during an experiment?
 The following subsections are building on top of the topics already presented in the paper.
-We will describe our extensive warning-system which offers various checks.
-The goal was to supervise and self-diagnose every critical component during operation.
+We will describe our extensive warning-system which offers various checks and bounds.
+The goal was and is to supervise and self-diagnose every critical component during operation.
 
 **If something unplanned or bad happens, you will most likely hear about it.**
 
@@ -48,12 +48,12 @@ These logs are mainly there for debugging in case something goes wrong.
 When using the provided `shepherd-data` utilities, the tool will usually report automatically if warnings and errors were emitted during the experiment.
 
 With the additional goal of failing early, the testbed tries to verify states and configurations as soon as possible.
-The user can see that during the creation of an invalid experiment, i.e. when a target is requested by two observer configurations.
+The user can see that during the creation of an invalid experiment, i.e. when a target is requested twice by two separate observer configurations.
 That concept was applied throughout the architecture.
 
 ## Observer Logs
 
-For executing an experiment, three software units work together in unison:
+For executing an experiment, three software units work together in unison on each observer:
 
 - the testbed service called `shepherd-sheep` which orchestrates all subsystems
 - a `kernel module` which coordinates hardware-access, data-flows and time-sync to the PRU-coprocessors
@@ -67,7 +67,7 @@ Some messages / errors are only reported through the kernel log, but most errors
 
 ### Supervision
 
-Let's have a look at the individual autonomous & supervised observer-tasks:
+Let's have a look at the individual autonomous & supervised observer-tasks performed by `shepherd-sheep`:
 
 - patching the node-ID and converting the firmware to intel-hex
 - programming and validating the firmware written to each MCU on the target
@@ -87,7 +87,7 @@ It makes no sense to list every error-case, but to pick a few:
 In addition to the discrete warnings each observer also records & timestamps utilization statistics:
 
 - PRU0 running the virtual source monitors it's execution time. The recorder will additionally warn about broken real-time conditions. This is important as it delays the following chip-select flank for triggering the ADC isochronously.
-- PRU1 running the GPIO-Tracer monitors the worst time between reading GPIO-states. Shepherd guarantees 1 MSps, but often surpasses that. In comparison to tracing power, the sampling rate varies. Just checking unchanged states currently results in 1.4 MHz minimal, 2.2 MHz mean and 2.9 MHz maximum rate. When states change and data has to be written, the rates will degrade to 1.1, 1.6 & 1.7 MHz respectively.
+- PRU1 running the GPIO-Tracer monitors the worst duration between reading GPIO-states. Shepherd guarantees 1 MSps, but often surpasses that. In comparison to tracing power, the sampling rate varies. Just checking unchanged states currently (May 2025) results in 1.4 MHz minimal, 2.2 MHz mean and 2.9 MHz maximum rate. When states change and data has to be written, the rates will degrade to 1.1, 1.6 & 1.7 MHz respectively.
 - Linux allows recording system utilization, specifically from CPU, RAM, network-IO & filesystem-IO
 - Linux also allows recording synchronization stats from NTP, PTP and PHC2SYS
 
@@ -95,11 +95,11 @@ In addition to the discrete warnings each observer also records & timestamps uti
 
 Most software for this testbed is directly unit-tested during development.
 Tests that are hardware independent are also executed on GitHub via continuous integration workflows.
-Firmwares and other hard-to-test elements are at least compiled and / or run through a static analysis in these workflows.
-Drafting new releases is only possible when these workflows pass.
+Firmwares and other hard-to-test elements are at least compiled and / or run through a static analysis in these GitHub workflows.
+Merging pull-requests and drafting new releases is only possible when these workflows pass.
 This won't make the system perfect, but at least catches a big chunk of possible flaws.
 
-As an example the software-stack of the observer offers a special loopback-test to validate data-consistency for the following route used by emulation-experiments:
+As an example for our testing the software-stack of the observer offers a special loopback-test to validate data-consistency for the following route used by emulation-experiments:
 
 ```
     Input-File
@@ -113,15 +113,17 @@ As an example the software-stack of the observer offers a special loopback-test 
                     ↪ Output-File
 ```
 
+By putting random data in and matching the output to it, we can verify the whole stack at once.
+
 ## Time Synchronization
 
-For running the testbed we are less interested in an absolute time, but rather a **relative sync** between all observers.
+For running the testbed we are less interested in an absolute time consistency, but rather a **relative sync** between all observers.
 We aim for sub 1 us accuracy and have chosen to use PTP on network level.
-The PTP-server is a Raspberry PI 4 that is first in line to support **hardware timestamping** -
+The PTP-server is a Raspberry PI 4 that is first in its family to support **hardware timestamping** -
 an essential feature that corrects timestamps right before packets are sent onto the wire.
 The routing is handled by a single level 3 Cisco-switch.
 It uses a dedicated FPGA instead of a CPU to reduce latency and jitter.
-The switch itself supports no PTP-features like transparent clock.
+The switch itself supports no dedicated PTP-features like transparent clock.
 
 ```{figure} /media/sync_setup_ptp.svg
 :align: center
@@ -133,16 +135,17 @@ two nodes are synchronized to one PTP server over a standard Ethernet switch.
 ```
 
 Each observer is utilizing a BeagleBone - an SBC that is also capable of hardware timestamping.
-Via PTP & PHC2SYS the Linux system time is adjusted.
-Each Shepherd observer records the statistics of both services to allow later diagnostics.
+Via PTP & PHC2SYS the Linux system time is adjusted continuously.
+Each Shepherd observer records the statistics of both services in the result file to allow later diagnostics.
 In a last step the system time is synchronized to the PRU-coprocessors.
 We have designed a dedicated self-tuning PI-controller that runs inside the kernel module and converges within less than 20 seconds.
 The figure above shows the relative sync between two exemplary observers in the testbed.
 Signals were taken from the chip-select input of the ADC as it is precisely controlled by PRU0 for isochronous timing.
+This measurement takes the whole synchronization-chain into account and exposes flaws and misbehavior.
 
 ```{seealso}
 1) Additional information about the PI-controller and an accompanying simulation can be found in the [source-directory](https://github.com/nes-lab/shepherd/tree/main/software/kernel-module) of the kernel module.
-2) Documentation about the measurement can be found [in the main repo](https://nes-lab.github.io/shepherd/dev/time_sync_analysis/readme.html).
+2) Documentation of the measurement can be found [in the main repo](https://nes-lab.github.io/shepherd/dev/time_sync_analysis/readme.html).
 ```
 
 ## Virtual Power Source & Harvester
@@ -151,9 +154,9 @@ The main routines for the virtual power source run inside the PRU0-coprocessor.
 Besides being partly covered by unittests, these routines unfortunately act largely like a black box.
 To counteract the issue, we took three additional steps:
 
-- The virtual power source, including the harvester, was fully ported to python as a 1:1 functional-copy. A simulation can be run by adding a virtual target. Internal states and behaviors can be easily debugged similar to [Simba](https://github.com/LENS-TUGraz/simba). While Simba was not designed with real-time and hardware in the loop in mind, the concepts have the same goal.
-- The C-code, running inside the PRU, can be compiled to a shared library with an interface for python. Beside the python-port, this can act as an additional plugin-replacement for an emulation experiment. All three versions can be run against each other and compared.
 - mathematical models, behaviors and parameters were validated during two master theses.
+- The virtual power source, including the harvester, was fully ported to python as a 1:1 functional-copy. A simulation can be run by adding a virtual target. Internal states and behaviors can be easily debugged similar to [Simba](https://github.com/LENS-TUGraz/simba). While Simba was not designed with real-time and hardware in the loop in mind, both concepts have the same goal.
+- The C-code, running inside the PRU, can be compiled to a shared library with a c-types interface for python. Beside the python-port, this can act as an additional plugin-replacement for an emulation experiment. All three versions can be (and were) run against each other and compared.
 
 For more insight during the actual emulation the user can leverage the following config and data:
 
@@ -168,7 +171,7 @@ More details can be found in the [section covering the virtual power source](/co
 
 The analog frontend of each observer is calibrated with a Keithley 2604B SMU to allow precise measurements.
 Calibration data is stored on an EEPROM on the same PCB as the frontend and will be copied to the result-file during an experiment.
-Additionally, the [data is stored online](https://github.com/orgua/shepherd-v2-planning/tree/main/doc_testbed/calibration_cape_24b_2023_09) to avoid loss and enable quick lookup.
+Additionally, the [cal-data is stored online](https://github.com/orgua/shepherd-v2-planning/tree/main/doc_testbed/calibration_cape_24b_2023_09) to avoid loss and enable quick lookup.
 During recording the raw values from the ADCs are not altered, but stored as is in the hdf5-file.
 This would allow for later re-calibration and easily correcting the result-files, in case an issue is found with an individual calibration.
 Calibrations made two years apart showed excellent long time stability of the frontend.

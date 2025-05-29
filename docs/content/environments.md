@@ -1,7 +1,7 @@
 # Energy Environments
 
 The testbed offers a basic set of environments to satisfy most needs.
-This section will guide you through the characteristics to help you make a choice.
+This section will guide you through the characteristics to help you make a choice for your experiments.
 
 ```{note}
 We plan on extending this collection further in the near future.
@@ -11,7 +11,7 @@ If you have ideas, wishes or actual recordings please don't hesitate [contacting
 ## Static Environments
 
 A constant supply can be advantageous for various scenarios like debugging during firmware-development.
-The testbed offers a set of 60 min recordings with:
+The testbed offers a set of 600 minute long recordings with:
 
 - 2 or 3 V
 - 1, 5, 10 or 50 mA

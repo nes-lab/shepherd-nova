@@ -3,8 +3,8 @@
 ```{attention}
 WORK IN PROGRESS
 - include content from links below,
-- explain neutrality-goal of surrounding HW (msp, switch, translators)
-- show how GPIO is routed simplified.
+- explain neutrality-goal of adjacent HW (msp, switch, translators)
+- show how GPIO is routed (simplified from schematic).
 ```
 
 ```{note}

@@ -25,7 +25,7 @@ It contains
 - much more (out of scope for this guide)
 
 You can install the user-tools by using the package-manager of your choice.
-In this case we use pip:
+In the following case we use pip:
 
 ```Shell
 pip3 install shepherd-data -U
@@ -41,7 +41,8 @@ Users of FlockLab should quickly feel at home, as shepherds options are largely 
 ```{tip}
 1) If you use an IDE and have the tooling installed, you can easily jump to the source of the data-class and see its defaults (i.e. `ctrl`-key + click on the class).
 2) This is just ONE way of doing things. Configuration could be also done in [YAML-files](https://github.com/nes-lab/shepherd-tools/blob/main/shepherd_core/examples/experiment_from_yaml.yaml) or in JSON via the open web-API in your language of choice.
-3) While we work on a proper in-depth documentation, you can [access the data-models online](https://github.com/nes-lab/shepherd-tools/tree/main/shepherd_core/shepherd_core/data_models)
+3) The API-documentation is integrated into the [main shepherd-documentation](https://nes-lab.github.io/shepherd/api/core_config.html)
+3) While we work on a proper in-depth documentation, you can also [access the data-models online](https://github.com/nes-lab/shepherd-tools/tree/main/shepherd_core/shepherd_core/data_models)
 ```
 
 Let's have a look at a minimal example that reuses an existing firmware:

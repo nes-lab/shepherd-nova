@@ -4,7 +4,7 @@ What to do if things don’t work as expected, or you are missing a desired feat
 You can ask the Dev-Team!
 Make sure (if applicable)
 
-- you read the provided guides carefully
+- you read the provided guides and documentation carefully
 - your software is up-to-date
     - this includes not only our provided software, but also
     - python, libraries or the browser (when used)

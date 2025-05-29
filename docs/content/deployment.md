@@ -4,12 +4,12 @@
 WORK IN PROGRESS
 ```
 
+For now (Mai 2025) the testbed is reshaped to mimic an elongated multihop mesh-network on the lower part of the office-map.
+
 The initial deployment covered the ring of offices around the buildings ventilation system.
 The inner structure mostly blocks RF due to lots of metal vents.
 10 - 14 shepherd observers were used for the testrun.
 Unfortunately the RF-Performance of the nodes was not strong enough to close the gap between II62 and II75 (left side of plan).
-
-For now (Mai 2025) the testbed was reshaped to mimic an elongated multihop mesh-network on the lower part of the office-floor.
 
 ## Deployment
 
@@ -25,7 +25,8 @@ Most horizontal walls are concrete, while the walls between offices are drywall.
 
 ## Link-Matrix
 
-The link-matrix of the testbed looks like that:
+The link-matrix of the testbed is currently measured mostly after changes in deployment.
+It is planned to offer weekly scans in the future while also keeping the history available.
 
 ```{code-block}
 :caption: [TrafficBench](https://github.com/nes-lab/TrafficBench) RF-survey from 2025-03-11, all nodes, values in dBm
@@ -46,7 +47,7 @@ Tx⟍Rx     1     2     3     4     5     6     7     8     9    10    11
 
 ## Changes in near Future
 
-Currently new hardware is produced, validated and calibrated.
+Currently new hardware is manufactured, validated and calibrated.
 
 With the official public release of the testbed in June 2025 it is planned to roll out an extended layout:
 
@@ -61,5 +62,5 @@ Most horizontal walls are concrete, while the walls between offices are drywall.
 ### What does that mean for the user?
 
 - number of observable GPIO from the target increases from 9 to 12, [see table here](https://github.com/nes-lab/shepherd-targets/tree/main/hardware/shepherd_nRF_FRAM_Target_v1.3)
-- two power good lines to signal current state of the virtual source to the target ([similar to Riotee](https://www.riotee.nessie-circuits.de/docs/latest/hardware/module.html))
+- two power good lines to signal current state of the virtual source to the target ([similar to Riotee](https://www.riotee.nessie-circuits.de/docs/latest/hardware/module.html)) for more advanced intermittent computing algorithms
 - usable node-count increases from 11 to 20+ for enabling more complex scenarios and a wider range of topologies
