@@ -2,10 +2,10 @@
 
 {{ super() }}
 
-{%- block mobile_menu  %}
+{%- block header_main_nav %}
+</div>
 <!-- replace unused element with university logos -->
-<div class="flex items-center justify-between flex-1 gap-4 sm:gap-4 md:justify-end">
+<div class="hidden items-center justify-between flex-1 gap-4 sm:gap-4 md:flex md:justify-end">
     <img width="120" height="55" class="mr-2 dark:invert" src="{{ pathto('_static/tuda_logo.svg', 1) }}"  alt="TUDa" />
     <img width="120" height="55" class="mr-2 dark:invert" src="{{ pathto('_static/tud_logo.svg', 1) }}"  alt="TUD" />
-</div>
-{%- endblock mobile_menu  %}
+{%- endblock header_main_nav %}
