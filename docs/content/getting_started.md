@@ -65,7 +65,7 @@ When looking at the one **target configuration** group, we see that
 - a list of **target IDs** is selected (`line 8`) for that group
 - an **energy environment** is specified by name (`line 9`)
 - also uses a pre-existing **firmware** (`line 10`) and
-- **UART-tracing** is activated (`line 11`) with its default config
+- **UART-logging** is activated (`line 11`) with its default config
 
 This style of configuration allows you fully customize the experiment to your needs.
 To give you some ideas:
@@ -73,7 +73,7 @@ To give you some ideas:
 - each target could be put in their own group and receive a custom environment, firmware and set of tracers
 - this programmatic way makes it easy to run a parameter sweep via a range of experiments
 
-### A more advanced Example
+### More advanced Example
 
 To give you some additional common configuration options we have a look at a second, slightly more complex, experiment:
 
@@ -103,21 +103,25 @@ Omitting the firmware-parameter flashes a default firmware to the target.
 Looking into the data-model reveals the existenz of a `firmware2`-parameter for the MSP430-MCU.
 To minimize the impact during an experiment a deep-sleep firmware is flashed.
 
-While the first example only used the UART-Tracer, we see two additional tracers here.
+While the first example only used the UART-logging, we see two additional tracers here.
 The **power-tracer** records the energy consumption of the target.
 Voltage & current are each sampled with 100 kHz.
 This results roughly in a 1 MB/s datastream.
 
 The second tracer records all GPIO-changes and acts like a logic analyzer.
 Sampling is done at roughly 1.2 MHz and changes on any GPIO-pin will be saved with the exact timestamp.
+To avoid sampling the UART-Pins (GPIO 0 & 1), they are taken out (masked) of the list of sampled GPIO.
+The numbering of this list corresponds with the [GPIO-names of the target-port](/content/targets.md) and include 16x GPIO and two power-good-signals.
 
 ```{note}
-Due to limited bandwidth of the filesystem it is only possible to continuously sample ~ 400 kSamples/s with a buffer that can hold burst with 3 MSamples.
+1) Due to limited bandwidth of the filesystem it is only possible to continuously sample ~ 400 kSamples/s with a buffer that can hold burst with 3 MSamples.
 Each observer monitors the backpressure and discards GPIO-Samples if certain thresholds are passed to ensure a responsive system.
+2) The target-port holds more GPIO than the current shepherd-hardware can process.
+It will be either [9x GPIO & PowerGood-High](https://github.com/nes-lab/shepherd-targets/tree/main/hardware/shepherd_nRF_FRAM_Target_v1.3e#connections-to-cape-v24-via-adapter) for now or [12x GPIO & 2x PowerGood](https://github.com/nes-lab/shepherd-targets/tree/main/hardware/shepherd_nRF_FRAM_Target_v1.3e#nrf52--msp430-fram-target-v13e) after the [expansion](/content/deployment.md#changes-in-near-future).
 ```
 
-Thirdly the already known **UART-Tracer** is used with a custom baudrate.
-This tracer does not sample the GPIO itself, but uses the serial-interface provided by Linux.
+Thirdly the already known **UART-logger** is used with a custom baudrate.
+This logger does not sample the GPIO itself, but uses the serial-interface provided by Linux.
 Each received text-line gets timestamped and saved.
 Due to the decoding, the datastream is smaller in comparison to the GPIO-tracer.
 Unfortunately the interface produces a large CPU-overhead with higher baudrates.

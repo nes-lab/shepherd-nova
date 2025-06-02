@@ -28,7 +28,7 @@ xp = sm.Experiment(
                 file=Path("./firmware_nrf.elf").absolute(),
             ),
             power_tracing=sm.PowerTracing(),
-            gpio_tracing=sm.GpioTracing(),
+            gpio_tracing=sm.GpioTracing(gpio=range(2, 18)),  # exclude UART
             uart_logging=sm.UartLogging(baudrate=57600),  # default is 115200
         ),
         sm.TargetConfig(
