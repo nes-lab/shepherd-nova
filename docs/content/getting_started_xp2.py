@@ -29,7 +29,7 @@ xp = sm.Experiment(
             ),
             power_tracing=sm.PowerTracing(),
             gpio_tracing=sm.GpioTracing(),
-            uart_tracing=sm.UartTracing(baudrate=57600),  # default is 115200
+            uart_logging=sm.UartLogging(baudrate=57600),  # default is 115200
         ),
         sm.TargetConfig(
             target_IDs=[1, 11],

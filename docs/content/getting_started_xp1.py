@@ -21,7 +21,7 @@ xp = sdm.Experiment(
             target_IDs=range(1, 11),
             energy_env=sdm.EnergyEnvironment(name="eenv_static_3000mV_50mA_3600s"),
             firmware1=sdm.Firmware(name="nrf52_rf_survey"),
-            uart_tracing=sdm.UartTracing(),  # default is 115200 baud
+            uart_logging=sdm.UartLogging(),  # default is 115200 baud
         ),
     ],
 )
