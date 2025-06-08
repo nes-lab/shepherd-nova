@@ -1,11 +1,11 @@
 [project]
 name = "shepherd-nova"
-version = "0.1.0"
+version = "0.6.0"
 description = "Public instance of the Shepherd Testbed"
 requires-python = ">=3.12"
 dependencies = [
-    "sphinx>=7.0.0",
-    "sphinxawesome-theme",
+    "sphinx>=8.0.0",
+    "sphinxawesome-theme==5.3.2",  # right before v6
     "sphinx-sitemap",
     "myst-parser",
     "docutils",

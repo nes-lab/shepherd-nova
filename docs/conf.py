@@ -6,7 +6,7 @@ project = "Shepherd Nova"
 project_full = "Public Instance of the Shepherd Testbed"
 copyright = "2025, NES Lab, TU Darmstadt & TU Dresden"
 author = "Ingmar Splitt"
-release = "0.1.0"
+release = "0.6.0"
 builder = "html"
 
 # -- General configuration ---------------------------------------------------
