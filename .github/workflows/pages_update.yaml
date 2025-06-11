@@ -30,6 +30,5 @@ jobs:
       - name: Build and Push Pages 🧱
         uses: sphinx-notes/pages@v3
         with:
-          python_version: '3.13'
           publish: true
           requirements_path: './'  # installs pyproject.toml

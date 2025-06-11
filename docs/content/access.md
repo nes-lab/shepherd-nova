@@ -52,6 +52,7 @@ pip3 install shepherd-client -U
 With it, you can manage your account and experiments.
 You have the option to save your credentials in your XDG-config-directory (i.e. $HOME/.config/shepherd).
 That way you can safely host your future scripts in public repositories.
+For registering an account you can fill out & run the following snippet once:
 
 ```{literalinclude} access_registration.py
 :language: python
@@ -59,11 +60,12 @@ That way you can safely host your future scripts in public repositories.
 :end-before: end example
 ```
 
-A few notes to explain the behavior here:
+A few notes to explain the behavior:
 
+- registration is possible as soon as you receive the token via mail
 - passwords need to be between 10 and 64 characters (all printable ASCII are allowed)
-- if you omit the password - the client will create a custom one for you
-- it is possible to trigger a forgot-password-routine
+- if you omit the password, the client will create a custom one for you
+- it is possible to trigger a forgot-password-routine (you can also back up the config-file)
 - choosing `save_credentials` will overwrite the local config (or create a new one)
 
 Once saved, you can omit the credentials, as shown here:
