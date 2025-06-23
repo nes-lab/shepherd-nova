@@ -1,9 +1,5 @@
 # Instance at TU Dresden
 
-```{attention}
-WORK IN PROGRESS
-```
-
 For now (Mai 2025) the testbed is reshaped to mimic an elongated multihop mesh-network on the lower part of the office-map.
 
 The initial deployment covered the ring of offices around the buildings ventilation system.

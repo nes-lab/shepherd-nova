@@ -23,20 +23,8 @@ To ensure a good user-experience for everyone we will start with the following f
 It's by no means a one-size-fits-all.
 If your setup requires temporary customization of quotas, feel free to contact us.
 
-Let's look at some numbers to bring the storage quota into perspective.
-Depending on the use-case 200 GiB can either hold 1 hour or several hundred hours of recordings.
-`GPIOTraces` produce 10 bytes per sample (2 byte value, 8 byte timestamp).
-So the sample-stream of continuous UART with 115 kBaud from the target results in roughly 1.2 MB/s.
-`PowerTraces` are in a similar ballpark with 16 bytes per sample (2*4 byte value, 8 byte timestamp).
-Shepherds sample-rate of 100 kHz produces 1.6 MB/s of data per node.
-
 ```{tip}
-How to get by with storage quotas:
-
-- GPIO- and Power-tracers can each be limited to a specific timeframe, or be disabled completely
-- a UART-logger can directly decode the GPIO-stream and only timestamps a line of text
-- when combining GPIO-tracer and UART-logger, the TX-pin can be removed from the GPIO-tracer
-- user-data can be deleted from the testbed-server, even without downloading it first
+The [getting started guide](/content/getting_started.md#reduce-size-of-result-files) includes a section that highlights options to reduce the size of result-files.
 ```
 
 ## Registration & Access
@@ -51,7 +39,7 @@ pip3 install shepherd-client -U
 
 With it, you can manage your account and experiments.
 You have the option to save your credentials in your `XDG-config`-directory (i.e. `$HOME/.config/shepherd`).
-That way you can safely host your future scripts in public repositories.
+That way you can safely host your later scripts in public repositories without leaking data.
 For registering an account you can fill out & run the following snippet once:
 
 ```{literalinclude} access_registration.py
@@ -62,7 +50,7 @@ For registering an account you can fill out & run the following snippet once:
 
 A few notes to explain the behavior:
 
-- registration is possible as soon as you receive the token via mail
+- registration is possible as soon as you receive a custom token via mail
 - passwords need to be between 10 and 64 characters (all printable ASCII)
 - if you omit the password, the client will create a custom one for you
 - it is possible to trigger a forgot-password-routine (you can also back up the config-file)

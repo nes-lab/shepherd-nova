@@ -144,6 +144,29 @@ TODO:
 - introduce testbed with an even simpler hello-world?
 ```
 
+## Reduce Size of Result-Files
+
+To give more control to the user, the experiment configuration includes several options for adjusting what is recorded and how it is post-processed.
+This short guide can be useful to optimize download-durations, local storage constraints or simply getting by with the storage quotas of the testbed.
+By default, no loggers or recorders are active as they are all opt-in.
+
+Let's look at some numbers to bring the 200 GiB storage quota into perspective.
+Depending on the use-case this can either hold 1 hour or several hundred hours of recordings.
+`GPIOTraces` produce 10 bytes per sample (2 byte value, 8 byte timestamp).
+So the sample-stream of continuous UART with 115 kBaud from the target results in roughly 1.2 MB/s.
+`PowerTraces` are in a similar ballpark with 16 bytes per sample (2*4 byte value, 8 byte timestamp).
+Shepherds sample-rate of 100 kHz produces 1.6 MB/s of data per node.
+
+Here are some options to adjust the recording-behavior:
+
+- GPIO- and Power-tracers can each be limited to a specific timeframe via the `delay` & `duration` argument, or be disabled completely
+- The output of the Power-tracer can be set to only include power. Voltage and current are combined via `PowerTracing(only_power=True)`.
+- The sample-rate of the Power-tracer can be adjusted, like `PowerTracing(samplerate=100)`. Caution is advised, as this setting will result in invalid data when used for I & V recording with a non-constant target voltage.
+- a UART-logger can directly decode the GPIO-stream and only timestamps a line of text
+- when combining GPIO-tracer and UART-logger, the UART-pins can be removed from the GPIO-tracer (in short `GpioTracing(gpios=range(2, 18)`)
+
+If quota hits, note that user-data can be deleted from the testbed-server, even without downloading it first.
+
 ## Adapting the Firmware
 
 While the testbed offers two target ports per observer, only one port is occupied at the moment.
@@ -167,7 +190,7 @@ This pin is actively used for UART-Rx here.
 ```
 
 ```{attention}
-TODO: description of targets now has its own sub-page.
+TODO: description of targets now has [its own sub-page](/content/targets.md).
 ```
 
 ## Scheduling an Experiment
