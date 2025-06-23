@@ -14,22 +14,26 @@ We are also thankful for [bugreports](/content/help_me_help_you).
 The tooling for the testbed is bundled in a package called `shepherd-data`.
 Sources are [hosted on GitHub](https://github.com/nes-lab/shepherd-tools) and the package is [distributed via PyPI](https://pypi.org/project/shepherd-data/).
 
-[![PyPI-Version](https://img.shields.io/pypi/v/shepherd_data.svg)](https://pypi.org/project/shepherd_data)
+Tools: [![PyPI-Version](https://img.shields.io/pypi/v/shepherd_data.svg)](https://pypi.org/project/shepherd_data)
+Client: [![PyPIVersion](https://img.shields.io/pypi/v/shepherd_client.svg)](https://pypi.org/project/shepherd_client)
 
-It contains
-
-- the testbed-client,
-- data-models for configuring an experiment,
-- various functionality for analyzing the resulting hdf5-files, i.e. extraction, down-sampling, plotting
-- a command-line interface and
-- much more (out of scope for this guide)
-
-You can install the user-tools by using the package-manager of your choice.
+You can install the user-tools & and client by using the package-manager of your choice.
 In the following case we use pip:
 
 ```Shell
 pip3 install shepherd-data -U
+pip3 install shepherd-client -U
 ```
+
+The user-tools contain
+
+- data-models for configuring an experiment,
+- reader and writer for the hdf5-files
+- various functionality for analyzing the resulting hdf5-files, i.e. extraction, down-sampling, plotting
+- a command-line interface (`shepherd-data` itself)
+- simulators for the virtual source, including virtual harvesters
+- waveform decoder (gpio-state & timestamp) for UART
+- much more (out of scope for this guide)
 
 ## Defining an Experiment
 
@@ -195,11 +199,15 @@ TODO: description of targets now has [its own sub-page](/content/targets.md).
 
 ## Scheduling an Experiment
 
-The testbed-client included in `shepherd-core` can be used to connect with the testbed-server remotely.
-With an active connection the experiments get more deeply validated, also considering the current structure of the testbed.
+The testbed-client can be used to connect with the testbed-server remotely.
+During upload, the experiments get more deeply validated, also considering the current structure of the testbed.
+When the configuration passes an experiment-ID is returned.
+That ID can then be used to schedule the experiment.
 
-```{attention}
-TODO: add codesnippet and CLI-call to submit an experiment.
+```{literalinclude} getting_started_xp_schedule.py
+:language: python
+:start-after: start example
+:end-before: end example
 ```
 
 Upon submitting an experiment a set of tasks is created and scheduled:
@@ -210,12 +218,40 @@ Upon submitting an experiment a set of tasks is created and scheduled:
 - a cleanup-task collects the data and prepares the download
 
 Each Observer generates a hdf5-file that can be later downloaded.
+You will be informed via e-mail when the download is ready.
+If the `email_results` option in the experiment-config is disabled, e-mails will only be sent if all scheduled experiments finished or if the experiment had an error during execution.
+
+Keep in mind, that you don't need to remember specific IDs as they can be always queried.
+The following snippet schedules all (previously unscheduled) experiments:
+
+```{literalinclude} getting_started_xp_schedule.py
+:language: python
+:start-after: start extra
+:end-before: end extra
+```
 
 ## Getting the Data
 
-```{attention}
-TODO: add codesnippet and CLI-call to download an experiment.
+Information about the experiments stored on the testbed can be queried via:
+
+```{literalinclude} getting_started_xp_info.py
+:language: python
+:start-after: start example
+:end-before: end example
 ```
+
+The command `.list_experiments()` returns a dictionary with the ID as key and the current state as value.
+The ID can then be used to request the whole experiment-configuration.
+
+Analog to that approach it is possible to use the ID for downloading and deleting specific experiments:
+
+```{literalinclude} getting_started_xp_download.py
+:language: python
+:start-after: start example
+:end-before: end example
+```
+
+Files will be created in a subdirectory with the pattern `SchedulingTimestamp-ExperimentName` and are then ready for analysis.
 
 ## Analyzing the Results
 
