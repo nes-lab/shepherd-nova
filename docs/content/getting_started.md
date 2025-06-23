@@ -257,7 +257,34 @@ Files will be created in a subdirectory with the pattern `SchedulingTimestamp-Ex
 
 `Shepherd-data` offers a powerful CLI-interface that makes accessing the data inside the `hdf5`-files easy.
 It is possible to extract data & logs, calculate metadata and generate plots.
+Analyzing the data can hardly be generalized, so this short guide will mostly help you get an overview.
+Have a look at [the APIs](https://nes-lab.github.io/shepherd/api/data_hdf5.html) of `shepherd-core` and `shepherd-data` to get a more in-depth view.
 
-```{attention}
-TODO: show access via python script and CLI, link to main doc for API
+```{note}
+a) The tool has integrated help-functionality. For a full list of supported commands and options, run `shepherd-data --help` and for more detail on a single command: `shepherd-data [COMMAND] --help`.
+b)
 ```
+
+To get a basic overview, let's extract UART-logs and meta-data first. The following commands can be applied to single files, whole directories (`.`) or even go down into subdirectories (`--recurse`).
+
+```Shell
+# executed in your downloaded experiment-directory
+shepherd-data extract-uart .
+shepherd-data extract-meta .
+```
+
+The second command will generate `.yaml`-files showing the data contained in the files.
+While a basic structural overview is given in the [main-docs](https://nes-lab.github.io/shepherd/user/data_format.html), this exposes all contained data.
+For voltage and current recordings it even compiles some statistics.
+Full system logs can be extracted by adding the `--debug`-switch.
+
+When PowerTracing was included, plots can be generated via:
+
+```Shell
+# overview, with one plot per file
+shepherd-data plot .
+# detailed plot, including all files
+shepherd-data plot . --start 10 --end 15 --multiplot
+```
+
+The second command will combine all sub-plots into one plot and limit the time-axis to a 5 seconds window, starting at 10 s.
