@@ -28,6 +28,12 @@ This sections contains artificial environments, beginning with on-off-patterns a
 
 ```{attention}
 WORK IN PROGRESS
+
+TODO:
+- link to generator-scripts
+- mention that the scripts are reproducible and scalable (more nodes, longer duration) without altering existing traces
+- add plots
+- show how to access them
 ```
 
 ```{tip}
@@ -41,5 +47,9 @@ Traces recorded with the shepherd harvester are currently based on the [publishe
 
 ```{attention}
 WORK IN PROGRESS
-TODO: differentiate single env to array of envs (=domain?)
+
+TODO:
+- show how the environments were cut down
+- differentiate single env to array of envs (=domain?)
+- link to converter-scripts and metadata collection
 ```
