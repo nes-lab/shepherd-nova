@@ -261,8 +261,7 @@ Analyzing the data can hardly be generalized, so this short guide will mostly he
 Have a look at [the APIs](https://nes-lab.github.io/shepherd/api/data_hdf5.html) of `shepherd-core` and `shepherd-data` to get a more in-depth view.
 
 ```{note}
-a) The tool has integrated help-functionality. For a full list of supported commands and options, run `shepherd-data --help` and for more detail on a single command: `shepherd-data [COMMAND] --help`.
-b)
+The tool has integrated help-functionality. For a full list of supported commands and options, run `shepherd-data --help` and for more detail on a single command: `shepherd-data [COMMAND] --help`.
 ```
 
 To get a basic overview, let's extract UART-logs and meta-data first. The following commands can be applied to single files, whole directories (`.`) or even go down into subdirectories (`--recurse`).
