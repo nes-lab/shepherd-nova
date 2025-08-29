@@ -11,4 +11,5 @@ dependencies = [
     "docutils",
     "shepherd-data",
     "pre-commit",
+    "pre-commit-uv",
 ]
