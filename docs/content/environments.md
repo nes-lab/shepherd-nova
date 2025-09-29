@@ -30,7 +30,7 @@ This sections contains artificial environments, beginning with on-off-patterns a
 WORK IN PROGRESS
 
 TODO:
-- link to generator-scripts
+- link to generator-scripts <https://github.com/nes-lab/shepherd-tools/tree/main/extra>
 - mention that the scripts are reproducible and scalable (more nodes, longer duration) without altering existing traces
 - add plots
 - show how to access them
@@ -51,5 +51,5 @@ WORK IN PROGRESS
 TODO:
 - show how the environments were cut down
 - differentiate single env to array of envs (=domain?)
-- link to converter-scripts and metadata collection
+- link to converter-scripts and metadata collection <https://github.com/nes-lab/shepherd-tools/tree/main/extra/eenv_converter>
 ```

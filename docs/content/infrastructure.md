@@ -6,7 +6,7 @@ Typical targets are low-power IoT devices equipped with MCU, wireless transceive
 The observers implement all services in hardware and software, emulating energy-harvesting conditions and collecting time-stamped observations.
 The backend servers provide harvesting data for emulation to the observers, store observations, coordinate observer operations (e.g. starting and stopping experiments), and interact with users who provide the target firmware and configuration of an experiment.
 
-Please consult the paper for an in-depth system description.
+Please consult [the paper](https://dl.acm.org/doi/10.1145/3711875.3729146) for an in-depth system description.
 The paper also evaluates topics like faithfulness and repeatability - the cornerstones of the testbed.
 
 ```{figure} /media/testbed_sys_overview.svg
@@ -26,10 +26,6 @@ The observers are connected over Ethernet with multiple backend servers
 
 Mapping of software modules to hardware components on a Shepherd Nova observer,
 showing the interaction and data flow between modules.
-```
-
-```{attention}
-TODO: add link to paper
 ```
 
 ## Building a Chain of Trust

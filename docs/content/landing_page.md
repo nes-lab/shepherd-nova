@@ -23,10 +23,6 @@ Public access is scheduled to launch during the MobiSys 2025.
 Direct Link: <https://testbed.nes-lab.org/>
 
 ```{seealso}
-A publication about Shepherd Nova can be found in the proceedings of the
+[Our Paper introducing Shepherd Nova](https://dl.acm.org/doi/10.1145/3711875.3729146) was published in the proceedings of the
 23nd ACM International Conference on Mobile Systems, Applications, and Services ([MobiSys 2025](https://www.sigmobile.org/mobisys/2025/)).
-```
-
-```{attention}
-TODO: add link to paper and also add citation proposal
 ```

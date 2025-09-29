@@ -2,13 +2,15 @@
 
 ```{attention}
 WORK IN PROGRESS
+
+TODO:
 - include content from links below,
 - explain neutrality-goal of adjacent HW (msp, switch, translators)
 - show how GPIO is routed (simplified from schematic).
 ```
 
 ```{note}
-Shepherd Nova has a second (unused) target-port on each observer and is looking for ideas.
+Shepherd Nova has a second (unused) target-port on each observer and our team is looking for ideas.
 ```
 
 ## nRF52 with MSP430FR as FRAM
