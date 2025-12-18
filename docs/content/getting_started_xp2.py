@@ -11,30 +11,30 @@ compared to first experiment, this one:
 # start example
 from pathlib import Path
 
-import shepherd_core.data_models as sm
+import shepherd_core.data_models as sdm
 
-xp = sm.Experiment(
+xp = sdm.Experiment(
     name="meaningful_TestName",
     duration=180,
     target_configs=[
-        sm.TargetConfig(
+        sdm.TargetConfig(
             target_IDs=range(2, 10),
             custom_IDs=range(7, 30),  # longer list is OK
-            energy_env=sm.EnergyEnvironment(name="eenv_static_3000mV_50mA_3600s"),
-            virtual_source=sm.VirtualSourceConfig(
+            energy_env=sdm.EnergyEnvironment(name="eenv_static_3000mV_50mA_3600s"),
+            virtual_source=sdm.VirtualSourceConfig(
                 name="diode+capacitor", C_intermediate_uF=100
             ),
-            firmware1=sm.Firmware.from_firmware(
+            firmware1=sdm.Firmware.from_firmware(
                 file=Path("./firmware_nrf.elf").absolute(),
             ),
-            power_tracing=sm.PowerTracing(),
-            gpio_tracing=sm.GpioTracing(gpio=range(2, 18)),  # exclude UART
-            uart_logging=sm.UartLogging(baudrate=57600),  # default is 115200
+            power_tracing=sdm.PowerTracing(),
+            gpio_tracing=sdm.GpioTracing(gpios=range(2, 18)),  # exclude UART
+            uart_logging=sdm.UartLogging(baudrate=57600),  # default is 115200
         ),
-        sm.TargetConfig(
+        sdm.TargetConfig(
             target_IDs=[1, 11],
-            energy_env=sm.EnergyEnvironment(name="eenv_static_3000mV_50mA_3600s"),
-            firmware1=sm.Firmware.from_firmware(
+            energy_env=sdm.EnergyEnvironment(name="eenv_static_3000mV_50mA_3600s"),
+            firmware1=sdm.Firmware.from_firmware(
                 file=Path("./firmware_nrf.elf").absolute(),
             ),
         ),
