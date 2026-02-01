@@ -5,7 +5,7 @@ description = "Public instance of the Shepherd Testbed"
 requires-python = ">=3.12"
 dependencies = [
     "sphinx>=8.0.0",
-    "sphinxawesome-theme==5.3.2",  # right before v6
+    "sphinxawesome-theme==6.0.0",  # right before v6
     "sphinx-sitemap",
     "myst-parser",
     "docutils",
