@@ -10,7 +10,7 @@ If critical work has to be done, we reserve the right to cancel currently active
 
 ## Limitations
 
-Beside [maintenance](#maintenance) and [quota](/content/access.md#quota) there are no further limitations.
+Beside [maintenance](#maintenance) and [quota](/content/account.md#quota) there are no further limitations.
 The testbed is usable 24-7 and a scheduled task has exclusive access to all observers.
 
 ## Trusting the Results
