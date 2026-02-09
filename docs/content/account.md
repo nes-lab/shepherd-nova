@@ -15,7 +15,7 @@ Please read through the [disclaimer](/about/disclaimer.md) and [privacy policy](
 
 ## Quota
 
-To ensure a good user-experience for everyone we will start with the following fair-use quotas:
+To ensure a good user-experience for everyone we will open our services with the following fair-use quotas:
 
 - **Duration** of an experiment is limited to 60 minutes. Submissions to the testbed must have a valid duration specified.
 - **Storage** of each user is limited to 200 GiB. Users being over quota won't be able to schedule new experiments. Old data must be deleted first from the testbed-server.
@@ -39,7 +39,7 @@ pip3 install shepherd-client -U
 
 With it, you can manage your account and experiments.
 You have the option to save your credentials in your `XDG-config`-directory (i.e. `$HOME/.config/shepherd`).
-That way you can safely host your later scripts in public repositories without leaking data.
+That way you can safely host your scripts in public repositories without leaking data.
 For registering an account you can fill out & run the following snippet once:
 
 ```{literalinclude} account_registration.py
@@ -50,10 +50,10 @@ For registering an account you can fill out & run the following snippet once:
 
 A few notes to explain the behavior:
 
-- registration is possible as soon as you receive a custom token via mail
+- registration is possible as soon as you receive the custom token via mail
 - passwords need to be between 10 and 64 characters (all printable ASCII)
 - if you omit the password, the client will create a custom one for you
-- it is possible to trigger a forgot-password-routine (you can also back up the config-file)
+- it is possible to trigger a forgot-password-routine (in addition you can back up the config-file)
 - choosing `save_credentials` will overwrite the local config (or create a new one)
 
 Once saved, you can omit the credentials, as shown here:
