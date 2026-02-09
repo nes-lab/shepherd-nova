@@ -10,6 +10,7 @@ dependencies = [
     "myst-parser",
     "docutils",
     "shepherd-data",
+    "shepherd-client",
     "prek",  # pre-commit replacement
     "pre-commit-uv",
 ]

@@ -3,7 +3,7 @@
 compared to first experiment, this one:
 
 - used just a subset of the target-nodes and assigns custom IDs
-- embeds local firmware in yaml (elf-support is currently linux-only)
+- embeds local firmware in YAML (elf-support is currently linux-only)
 - use all 3 tracing-options - just for demonstration purposes
 - second target configuration uses list-style to select targets
 """

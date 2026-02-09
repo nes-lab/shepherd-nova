@@ -4,10 +4,10 @@ Minimal setup for measuring link matrix with pre-existing firmware
 
 Assumptions:
 
-- start ASAP,
-- static Power-Supply
-- use all 3 tracing-options - just for demonstration purposes
-- second unused MCU gets sleep-firmware
+- start experiment ASAP,
+- use static Power-Supply
+- use all 3 tracing-options (just for demonstration purposes)
+- second unused MCU gets sleep-firmware (implicit behavior)
 """
 
 # start example

@@ -6,6 +6,7 @@
     - scheduling will fail if your quota is exceeded
 - the state of the experiment progresses from:
         created -> scheduled -> running -> finished
+                                        -> failed (finished with error)
 """
 
 # start example
@@ -19,7 +20,7 @@ xp = sdm.Experiment(
     duration=3 * 60,
     target_configs=[
         sdm.TargetConfig(
-            target_IDs=range(1, 11),
+            target_IDs=range(1, 12),
             energy_env=sdm.EnergyEnvironment(name="synthetic_static_3000mV_50mA"),
             firmware1=sdm.Firmware(name="nrf52_rf_survey"),
             uart_logging=sdm.UartLogging(),  # default is 115200 baud
