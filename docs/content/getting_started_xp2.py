@@ -20,7 +20,7 @@ xp = sdm.Experiment(
         sdm.TargetConfig(
             target_IDs=range(2, 10),
             custom_IDs=range(7, 30),  # longer list is OK
-            energy_env=sdm.EnergyEnvironment(name="eenv_static_3000mV_50mA_3600s"),
+            energy_env=sdm.EnergyEnvironment(name="synthetic_static_3000mV_50mA"),
             virtual_source=sdm.VirtualSourceConfig(
                 name="diode+capacitor", C_intermediate_uF=100
             ),
@@ -33,7 +33,7 @@ xp = sdm.Experiment(
         ),
         sdm.TargetConfig(
             target_IDs=[1, 11],
-            energy_env=sdm.EnergyEnvironment(name="eenv_static_3000mV_50mA_3600s"),
+            energy_env=sdm.EnergyEnvironment(name="synthetic_static_3000mV_50mA"),
             firmware1=sdm.Firmware.from_firmware(
                 file=Path("./firmware_nrf.elf").absolute(),
             ),

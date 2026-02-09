@@ -20,7 +20,7 @@ To select a static environment for an experiment the name can be derived like:
 
 `eenv_stativ_{U\mV}mV_{I\mA}_{t\s}s`
 
-So the trace with 3 V and 50 mA is selectable by name `eenv_static_3000mV_50mA_3600s`.
+So the trace with 3 V and 50 mA is selectable by name `synthetic_static_3000mV_50mA`.
 
 ## Dynamic Environments
 
