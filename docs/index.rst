@@ -9,7 +9,7 @@
    ./content/news.md
    ./content/deployment.md
 
-   ./content/access.md
+   ./content/account.md
    ./content/getting_started.md
 
    ./content/infrastructure.md

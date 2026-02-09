@@ -42,7 +42,7 @@ You have the option to save your credentials in your `XDG-config`-directory (i.e
 That way you can safely host your later scripts in public repositories without leaking data.
 For registering an account you can fill out & run the following snippet once:
 
-```{literalinclude} access_registration.py
+```{literalinclude} account_registration.py
 :language: python
 :start-after: start example
 :end-before: end example
@@ -58,7 +58,7 @@ A few notes to explain the behavior:
 
 Once saved, you can omit the credentials, as shown here:
 
-```{literalinclude} access_user.py
+```{literalinclude} account_info.py
 :language: python
 :start-after: start example
 :end-before: end example
