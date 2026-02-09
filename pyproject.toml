@@ -4,13 +4,12 @@ version = "0.6.0"
 description = "Public instance of the Shepherd Testbed"
 requires-python = ">=3.12"
 dependencies = [
-    "sphinx>=8.0.0",
-    "sphinxawesome-theme==6.0.0",  # right before v6
+    "sphinx>=9.0.0",
+    "sphinxawesome-theme",
     "sphinx-sitemap",
     "myst-parser",
     "docutils",
     "shepherd-data",
     "shepherd-client",
     "prek",  # pre-commit replacement
-    "pre-commit-uv",
 ]
