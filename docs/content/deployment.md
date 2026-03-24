@@ -22,23 +22,23 @@ Most horizontal walls are concrete, while the walls between offices are drywall.
 ## Link-Matrix
 
 The link-matrix of the testbed is currently measured mostly after changes in deployment.
-It is planned to offer weekly scans in the future while also keeping the history available.
+It is planned to offer weekly scans in the future while also keeping the history available. A collection of past measurements is available [here](https://github.com/nes-lab/shepherd-nova/tree/main/docs/link_matrix).
 
 ```{code-block}
-:caption: [TrafficBench](https://github.com/nes-lab/TrafficBench) RF-survey from 2026-02-07, all nodes, values in dBm
+:caption: [TrafficBench](https://github.com/nes-lab/TrafficBench) RF-survey from 2026-03-23, all nodes, values in dBm
 Tx⟍Rx     1     2     3     4     5     6     7     8     9    10    11
      +-----------------------------------------------------------------
-   1 |        -36   -57   -64   -67   -73   -84   -81
-   2 |  -37         -49   -65   -64   -69         -83
-   3 |  -57   -49         -56   -49   -60   -86   -76
-   4 |  -63   -64   -55         -44   -49   -70   -60
-   5 |  -67   -63   -48   -44         -53   -68   -70
-   6 |  -73   -68   -59   -49   -53         -59   -64   -80   -78
-   7 |  -83         -85   -70   -67   -58         -53   -76   -61   -77
-   8 |  -82   -82   -76   -61   -71   -65   -54         -85   -73
-   9 |                                -80   -77   -84         -40   -74
-  10 |                                -79   -62   -73   -41         -82
-  11 |                                      -78         -74   -82
+   1 |        -33   -58   -59   -57   -71   -87   -79
+   2 |  -32         -45   -60   -56   -75   -78   -78
+   3 |  -59   -46         -39   -50   -52   -66   -67
+   4 |  -59   -60   -38         -44   -44   -61   -62
+   5 |  -57   -56   -50   -44         -52   -61   -65
+   6 |  -70   -75   -52   -44   -52         -57   -60   -81   -73
+   7 |  -85   -77   -64   -60   -60   -55         -42   -76   -65   -84
+   8 |  -79   -79   -67   -63   -66   -61   -44         -76   -67   -88
+   9 |                                -81   -77   -76         -46   -82
+  10 |                                -73   -67   -67   -46         -73
+  11 |                                      -85         -82   -73
 ```
 
 ## Changes in near Future
