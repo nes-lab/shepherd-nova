@@ -122,8 +122,7 @@ The numbering of this list corresponds with the [GPIO-names of the target-port](
 ```{note}
 1) Due to limited bandwidth of the filesystem it is only possible to continuously sample ~ 400 kSamples/s with a buffer that can hold burst with 3 MSamples.
 Each observer monitors the backpressure and discards GPIO-Samples if certain thresholds are passed to ensure a responsive system.
-2) The target-port holds more GPIO than the current shepherd-hardware can process.
-It will be either [9x GPIO & PowerGood-High](https://github.com/nes-lab/shepherd-targets/tree/main/hardware/shepherd_nRF_FRAM_Target_v1.3e#connections-to-cape-v24-via-adapter) for now or [12x GPIO & 2x PowerGood](https://github.com/nes-lab/shepherd-targets/tree/main/hardware/shepherd_nRF_FRAM_Target_v1.3e#nrf52--msp430-fram-target-v13e) after the [expansion](/content/deployment.md#changes-in-near-future).
+2) The target-port holds more GPIO than the current shepherd-hardware can process. The currently installed Cape v2.5e can handle [12x GPIO & 2x PowerGood](https://github.com/nes-lab/shepherd-targets/tree/main/hardware/shepherd_nRF_FRAM_Target_v1.3e#nrf52--msp430-fram-target-v13e).
 ```
 
 Thirdly the already known **UART-logger** is used with a custom baudrate.

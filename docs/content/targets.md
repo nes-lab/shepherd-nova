@@ -18,6 +18,6 @@ Shepherd Nova has a second (unused) target-port on each observer and our team is
 ```{seealso}
 1) Main-Repo & General Overview: <https://github.com/nes-lab/shepherd-targets/>
 2) GPIO-Description: <https://github.com/nes-lab/shepherd-targets/tree/main/hardware/shepherd_nRF_FRAM_Target_v1.3e>
-3) Target-Port of current Cape v2.4: <https://nes-lab.github.io/shepherd/user/hardware.html#target-port>
+3) Target-Port of current Cape v2.5e: <https://github.com/nes-lab/shepherd/tree/main/hardware/cape_v2.5e#target-port---cape-25d-this-revision>
 4) Main-Doku & general Overview (same as above): <https://nes-lab.github.io/shepherd/external/readme_targets.html>
 ```

@@ -158,7 +158,7 @@ To counteract the issue, we took three additional steps:
 
 For more insight during the actual emulation the user can leverage the following config and data:
 
-- the power-good-signal (battery OK) for the target is recorded together with the GPIO-Trace
+- the power-good-signals (battery OK hysteresis) for the target is recorded together with the GPIO-Trace
 - it's possible to record the voltage levels and output-current of the virtual energy storage instead of the direct target input - this is helpful for configurations with static output voltage (i.e. buck-converter)
 
 ```{seealso}
