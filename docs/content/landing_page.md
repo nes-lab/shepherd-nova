@@ -46,9 +46,15 @@ Direct Link: <https://testbed.nes-lab.org/>
 2. Prepare your firmware — Build for nRF52 targets (MSP430 optional for advanced use).
 3. Run your experiment — Define energy traces, upload, and collect results.
 
+## 🛠️ What do I need?
+
+- an email-account to [register your user-account](/content/account.md) for the testbed
+- a host system that is capable of running python (v3.10 or newer)
+- internet access to work with the web-API
+
 ## 📄 Learn more
 
-- Paper — [´Shepherd Nova´ at MobiSys 2025](https://dl.acm.org/doi/10.1145/3711875.3729146)
+- Paper — [Shepherd Nova at MobiSys 2025](https://dl.acm.org/doi/10.1145/3711875.3729146)
 - Tools & SDK — Everything you need is available in [our repositories](https://github.com/nes-lab/shepherd-tools)
 - Support — Questions are always welcome. Check our quick‑start guide or open an issue
 
