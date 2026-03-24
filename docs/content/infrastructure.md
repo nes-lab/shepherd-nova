@@ -114,7 +114,7 @@ By putting random data in and comparing the output to it, we can verify the whol
 ## Time Synchronization
 
 For running the testbed we are less interested in an absolute time consistency, but rather a **relative sync** between all observers.
-We aim for sub 1 us accuracy and have chosen to use **PTP** on network level.
+We aim for sub 1 µs accuracy and have chosen to use **PTP** on network level.
 The PTP-server is a Raspberry PI 4 that is first in its family to support **hardware timestamping** -
 an essential feature that corrects timestamps right before packets are sent onto the wire.
 The routing is handled by a single level 3 Cisco-switch (**flat hierarchy**).
@@ -169,7 +169,7 @@ More details can be found in the [section covering the virtual power source](/co
 
 The analog frontend of each observer is calibrated with a **Keithley 2604B** SMU to allow precise measurements.
 Calibration data is stored on an EEPROM on the same PCB as the frontend and will be copied to the result-file during an experiment.
-Additionally, the [cal-data is stored online](https://github.com/orgua/shepherd-v2-planning/tree/main/doc_testbed/calibration_cape_24b_2023_09) to avoid loss and enable quick lookup.
+Additionally, the [cal-data is stored online](https://github.com/orgua/shepherd-v2-planning/tree/main/doc_testbed/calibration_cape_25e_2026-03) to avoid loss and enable quick lookup.
 During recording the raw values from the ADCs are not altered, but stored as is in the hdf5-file.
 This would allow for later re-calibration and easily correcting the result-files, in case an issue is found with an individual calibration.
 Calibrations made two years apart showed excellent long time stability of the frontend.

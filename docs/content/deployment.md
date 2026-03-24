@@ -57,6 +57,6 @@ Most horizontal walls are concrete, while the walls between offices are drywall.
 
 ### What does that mean for the user?
 
-- number of observable GPIO from the target increases from 9 to 12, [see table here](https://github.com/nes-lab/shepherd-targets/tree/main/hardware/shepherd_nRF_FRAM_Target_v1.3)
-- two power good signals to communicate current state of the virtual source to the target ([similar to Riotee](https://www.riotee.nessie-circuits.de/docs/latest/hardware/module.html)) for more advanced intermittent computing algorithms
+- (done) number of observable GPIO from the target increases from 9 to 12, [see table here](https://github.com/nes-lab/shepherd-targets/tree/main/hardware/shepherd_nRF_FRAM_Target_v1.3)
+- (done) two power good signals to communicate current state of the virtual source to the target ([similar to Riotee](https://www.riotee.nessie-circuits.de/docs/latest/hardware/module.html)) for more advanced intermittent computing algorithms
 - usable node-count increases from 11 to 20+ for enabling more complex scenarios and a wider range of topologies

@@ -16,8 +16,8 @@ Direct Link: <https://testbed.nes-lab.org/>
   - replay of [energy environments](/content/environments.md) in combination with
   - an energy harvesting-component called [virtual power source](/content/virtual_source.md) to supply power to the targets (optional)
 - record power traces at a rate of 100 kHz with separate values for current & voltage (optional)
-- timestamping with sub 1 us accuracy across the testbed
-- recording of target-GPIO with up to 1 MHz and 9 / 12 channels (optional)
+- timestamping with sub 1 µs accuracy across the testbed
+- recording of target-GPIO with up to 1 MHz and 12 channels (optional)
 - decoding of UART at configurable baud rate (optional)
 - patching of node-ID in `ELF` target-firmware (optional)
 - embedded logs, including an extensive warning-system that supervises & diagnoses every critical element during operation
