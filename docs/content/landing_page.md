@@ -1,12 +1,15 @@
 # Shepherd Nova
 
-`Shepherd Nova` is the public instance of the Shepherd Testbed -
-a distributed platform for rigorous experiments under repeatable energy-harvesting conditions.
+`Shepherd Nova` is an open source research testbed, designed to help you build and test battery-free systems.
+Whether you are developing new algorithms or communication protocols, our distributed platform provides the reliable conditions you need to get results.
+
+Shepherd is a distributed platform for rigorous experiments under repeatable energy-harvesting conditions.
 In simpler terms, the testbed helps explore ways to eliminate the need for batteries and their potentially harmful chemistry.
 
 ## 🎉 Welcome!
 
-If you're new here, don't worry — Shepherd Nova is designed to make advanced experiments simple and accessible. You get a professional test environment without the usual setup headaches.
+If you're new here, don't worry — Shepherd Nova is designed to make advanced experiments simple and accessible.
+You get a professional test environment with sensible defaults, so you can control the steepness of the learning curve.
 
 Our system was presented at [MobiSys 2025](https://dl.acm.org/doi/10.1145/3711875.3729146) (the [23nd ACM International Conference](https://www.sigmobile.org/mobisys/2025/) on Mobile Systems, Applications, and Services). We're proud to offer this platform to researchers and developers like you.
 
@@ -24,6 +27,7 @@ Direct Link: <https://testbed.nes-lab.org/>
 ### For Professionals
 
 - Precise & repeatable — Consistently replay real‑world energy environments across experiments.
+- Customizable power-supply — Parametrized configuration of virtual harvesting and power supply stage.
 - High‑fidelity measurement — Record voltage and current at 100 kHz, with sub‑microsecond timestamping.
 - Flexible I/O — Capture GPIO signals up to 1 MHz, decode UART, and more.
 - Smart supervision — An extensive system monitors and diagnoses every critical element during operation, embeds the logs in the results and therefore creates a new level of transparency.
