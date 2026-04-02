@@ -3,12 +3,11 @@
 The first testbed is deployed in the cfaed offices of the Barkhausen Bau at TU Dresden.
 Our test-network consists of 24 observers and is mostly shaped by the buildings ventilation system and mimics a ring.
 The inner structure of the ventilation system blocks RF due to lots of metal vents.
-In addition to that ring, you can find the following topological features
+In addition to that ring, you can find or create the following topological features
 
-- a dense cluster on the south side of the office-map, and
+- a dense cluster on the south side of the office-map,
 - a bottleneck on the west side between II62 and II75, which allows
-- an (elongated) U-shaped network when disabling certain nodes or reducing transmit power
-
+- an (elongated) U-shaped network by disabling certain nodes or reducing transmit power
 
 ## Deployment
 
