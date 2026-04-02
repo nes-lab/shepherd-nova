@@ -1,17 +1,20 @@
 # Instance at TU Dresden
 
-For now (February 2026) the testbed is reshaped to mimic an elongated multihop mesh-network on the lower part of the office-map.
+The first testbed is deployed in the cfaed offices of the Barkhausen Bau at TU Dresden.
+Our test-network consists of 24 observers and is mostly shaped by the buildings ventilation system and mimics a ring.
+The inner structure of the ventilation system blocks RF due to lots of metal vents.
+In addition to that ring, you can find the following topological features
 
-The initial deployment covered the ring of offices around the buildings ventilation system.
-The inner structure mostly blocks RF due to lots of metal vents.
-10 - 14 shepherd observers were used for the testrun.
-Unfortunately the RF-Performance of the nodes was not strong enough to close the gap between II62 and II75 (left side of plan).
+- a dense cluster on the south side of the office-map, and
+- a bottleneck on the west side between II62 and II75, which allows
+- an (elongated) U-shaped network when disabling certain nodes or reducing transmit power
+
 
 ## Deployment
 
 Below is a screenshot of the [Campus-Navigator](https://navigator.tu-dresden.de/etplan/bar/02) with marked node-positions.
 
-```{figure} /media/cfaed_floorplan_current.png
+```{figure} /media/cfaed_floorplan_with_nodes.png
 :align: center
 :alt: CFAED floor with marked node-positions
 
@@ -22,41 +25,34 @@ Most horizontal walls are concrete, while the walls between offices are drywall.
 ## Link-Matrix
 
 The link-matrix of the testbed is currently measured mostly after changes in deployment.
-It is planned to offer weekly scans in the future while also keeping the history available. A collection of past measurements is available [here](https://github.com/nes-lab/shepherd-nova/tree/main/docs/link_matrix).
+It is planned to offer weekly scans in the future while also keeping the history available.
+A collection of past measurements and network-layouts is available [here](https://github.com/nes-lab/shepherd-nova/tree/main/docs/link_matrix).
 
 ```{code-block}
-:caption: [TrafficBench](https://github.com/nes-lab/TrafficBench) RF-survey from 2026-03-23, all nodes, values in dBm
-Tx⟍Rx     1     2     3     4     5     6     7     8     9    10    11
-     +-----------------------------------------------------------------
-   1 |        -33   -58   -59   -57   -71   -87   -79
-   2 |  -32         -45   -60   -56   -75   -78   -78
-   3 |  -59   -46         -39   -50   -52   -66   -67
-   4 |  -59   -60   -38         -44   -44   -61   -62
-   5 |  -57   -56   -50   -44         -52   -61   -65
-   6 |  -70   -75   -52   -44   -52         -57   -60   -81   -73
-   7 |  -85   -77   -64   -60   -60   -55         -42   -76   -65   -84
-   8 |  -79   -79   -67   -63   -66   -61   -44         -76   -67   -88
-   9 |                                -81   -77   -76         -46   -82
-  10 |                                -73   -67   -67   -46         -73
-  11 |                                      -85         -82   -73
+:caption: [TrafficBench](https://github.com/nes-lab/TrafficBench) RF-survey from 2026-04-02, all nodes except target 18, values in dBm
+Tx⟍Rx     1     2     3     4     5     6     7     8     9    10    11    12    13    14    15    16    17    19    20    21    22    23    24
+     +-----------------------------------------------------------------------------------------------------------------------------------------
+   1 |        -35   -53   -73   -59   -61   -73   -75   -78   -87   -78                                                         -88   -75   -66
+   2 |  -35         -51   -58   -58   -58   -73   -65   -70   -84   -75                                                         -81   -61   -65
+   3 |  -54   -53         -44   -38   -49   -58   -56   -70   -67   -69                                                               -49   -50
+   4 |  -72   -58   -42         -36   -41   -48   -42   -60   -67   -61                           -88                                 -37   -39
+   5 |  -59   -58   -37   -36         -38   -53   -53   -55   -73   -63                                                               -43   -32
+   6 |  -62   -58   -47   -41   -38         -42   -48   -63   -65   -52         -87                                                   -43   -38
+   7 |  -74   -74   -59   -50   -54   -43         -41   -48   -55   -61         -79                                                   -52   -61
+   8 |  -75   -65   -55   -43   -53   -48   -40         -54   -50   -52   -82   -82                                                   -39   -43
+   9 |  -80   -72   -72   -62   -57   -64   -48   -55         -41   -49   -79   -69               -88                                 -63   -61
+  10 |  -84   -83   -64   -65   -71   -63   -51   -48   -37         -44   -76   -68   -81         -84   -88                           -73   -70
+  11 |  -79   -76   -68   -62   -63   -53   -59   -52   -47   -47         -72   -66         -84   -86                                 -65   -61
+  12 |                                      -85   -82   -77   -79   -71         -48   -78   -67   -76   -73         -83               -87
+  13 |                                -88   -78   -82   -68   -71   -66   -49         -73   -74   -70   -88                           -84
+  14 |                                                        -83         -78   -72         -78   -74   -82
+  15 |                                                  -87         -85   -69   -74   -79         -51   -61   -72   -74
+  16 |                    -90                           -87   -87   -86   -76   -70   -74   -50         -48   -76   -69   -82   -86
+  17 |                                                        -91         -73   -88   -82   -60   -48         -77   -62   -76   -86
+  19 |                                                                                      -70   -75   -77         -56   -49   -66
+  20 |                                                                    -84               -74   -68   -62   -56         -52   -74
+  21 |                                                                                            -82   -76   -50   -52         -51
+  22 |        -81                                                                                 -86   -86   -66   -74   -50
+  23 |  -75   -62   -47   -37   -42   -43   -50   -38   -61   -72   -64   -87   -88                                                         -40
+  24 |  -65   -65   -48   -39   -31   -37   -58   -42   -58   -71   -60                                                               -39
 ```
-
-## Changes in near Future
-
-Currently new hardware is manufactured, validated and calibrated.
-
-With the official public release of the testbed in January 2026 it is planned to roll out an extended layout:
-
-```{figure} /media/cfaed_floorplan_with_nodes.png
-:align: center
-:alt: CFAED floor with marked future node-positions
-
-**floor with marked future node-positions**.
-Most horizontal walls are concrete, while the walls between offices are drywall.
-```
-
-### What does that mean for the user?
-
-- (done) number of observable GPIO from the target increases from 9 to 12, [see table here](https://github.com/nes-lab/shepherd-targets/tree/main/hardware/shepherd_nRF_FRAM_Target_v1.3)
-- (done) two power good signals to communicate current state of the virtual source to the target ([similar to Riotee](https://www.riotee.nessie-circuits.de/docs/latest/hardware/module.html)) for more advanced intermittent computing algorithms
-- usable node-count increases from 11 to 20+ for enabling more complex scenarios and a wider range of topologies
