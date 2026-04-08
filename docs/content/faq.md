@@ -8,10 +8,21 @@ Changes in the deployment will be announced in the [news-section](./news) ahead 
 
 If critical work has to be done, we reserve the right to cancel currently active experiments at any time.
 
+## Restrictions & Status
+
+Current status of the testbed is summarized on the main level of our Web-API: <https://shepherd.cfaed.tu-dresden.de:8000/>.
+Users can check if
+
+- all targets & observers are online,
+- subservices are running, and
+- restrictions are currently in effect
+
+It is planned for the near future to bring this info directly to the client and the website.
+
 ## Limitations
 
 Beside [maintenance](#maintenance) and [quota](/content/account.md#quota) there are no further limitations.
-The testbed is usable 24-7 and a scheduled task has exclusive access to all observers.
+The testbed is usable 24-7 and scheduled tasks have exclusive access to all observers.
 
 ## Trusting the Results
 
@@ -34,7 +45,7 @@ So writing your own tooling is generally possible.
 We'd also like to point out, that the included redoc-website is interactive.
 It allows to log in and interact with actual data.
 
-Redoc-Documentation: <https://shepherd.cfaed.tu-dresden.de:8000/>
+Redoc-Documentation: <https://shepherd.cfaed.tu-dresden.de:8000/doc>
 
 Sources: <https://github.com/nes-lab/shepherd-webapi>
 

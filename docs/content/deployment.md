@@ -56,3 +56,12 @@ Tx⟍Rx     1     2     3     4     5     6     7     8     9    10    11    12 
   23 |  -73   -61   -47   -37   -42   -42   -50   -38   -61   -73   -64   -85   -87                                                               -40
   24 |  -68   -66   -47   -39   -31   -38   -58   -42   -57   -69   -60                                                                     -39
 ```
+
+## Impressions
+
+```{figure} /media/deployment_conference_room.jpg
+:align: center
+:alt: Observer node deployed in conference room II62
+
+Observer node deployed in conference room II62.
+```
