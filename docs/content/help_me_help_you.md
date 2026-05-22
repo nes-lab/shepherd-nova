@@ -1,7 +1,7 @@
 # Help
 
 What to do if things don’t work as expected, or you are missing a desired feature?
-You can ask the Dev-Team!
+You can ask the [Dev-Team](/about/contact.md#team)!
 Make sure (if applicable)
 
 - you read the provided guides and documentation carefully
@@ -18,3 +18,4 @@ Please choose the correct subproject:
 - [user-tools](https://github.com/nes-lab/shepherd-tools/issues) - everything related to the data processing toolchain
 - [targets-repo](https://github.com/nes-lab/shepherd-targets/issues) - HW & SW for the cyber-physical systems running within the emulated energy environments
 - [webApi](https://github.com/nes-lab/shepherd-webapi/issues) - the interface between the testbed instance and the user
+- [nova-repo](https://github.com/nes-lab/shepherd-nova) - containing the source of the website
