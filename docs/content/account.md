@@ -15,7 +15,7 @@ Please read through the [disclaimer](/about/disclaimer.md) and [privacy policy](
 
 ## Quota
 
-To ensure a good user-experience for everyone we will open our services with the following fair-use quotas:
+To ensure a good user-experience for everyone, we will open our services with the following fair-use quotas:
 
 - **Duration** of an experiment is limited to 60 minutes. Submissions to the testbed must have a valid duration specified.
 - **Storage** of each user is limited to 200 GiB. Users being over quota won't be able to schedule new experiments. Old data must be deleted first from the testbed-server.
@@ -25,6 +25,7 @@ If your setup requires temporary customization of quotas, feel free to contact u
 
 ```{tip}
 The [getting started guide](/content/getting_started.md#reduce-size-of-result-files) includes a section that highlights options to reduce the size of result-files.
+It also gives examples for estimating resulting file-sizes.
 ```
 
 ## Registration & Access

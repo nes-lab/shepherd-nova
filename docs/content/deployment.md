@@ -1,6 +1,6 @@
 # Instance at TU Dresden
 
-Welcome to the first public deployment of the [Shepherd Nova](https://nes-lab.github.io/shepherd-nova/) testbed!
+Welcome to the first public deployment of the [Shepherd Nova](/content/landing_page.md) testbed!
 It is available for experiments all around the clock (24/7).
 This page describes the physical layout and wireless connectivity between nodes.
 

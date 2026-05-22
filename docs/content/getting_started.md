@@ -167,7 +167,7 @@ Here are some options to adjust the recording-behavior:
 - GPIO- and Power-tracers can each be limited to a specific timeframe via the `delay` & `duration` argument, or be disabled completely
 - The output of the Power-tracer can be set to only include power. Voltage and current are combined via `PowerTracing(only_power=True)`.
 - The sample-rate of the Power-tracer can be adjusted, like `PowerTracing(samplerate=100)`. Caution is advised, as this setting will result in invalid data when used for I & V recording with a non-constant target voltage.
-- a UART-logger can directly decode the GPIO-stream and only timestamps a line of text
+- a UART-logger can directly decode the GPIO-stream and only timestamps single lines of text
 - when combining GPIO-tracer and UART-logger, the UART-pins can be removed from the GPIO-tracer (in short `GpioTracing(gpios=range(2, 18)`)
 
 If quota hits, note that user-data can be deleted from the testbed-server, even without downloading it first.
