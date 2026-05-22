@@ -1,17 +1,30 @@
 # Instance at TU Dresden
 
-The first testbed is deployed in the cfaed offices of the Barkhausen Bau at TU Dresden.
-Our test-network consists of 24 observers and is mostly shaped by the buildings ventilation system and mimics a ring.
-The inner structure of the ventilation system blocks RF due to lots of metal vents.
-In addition to that ring, you can find or create the following topological features
+Welcome to the first public deployment of the [Shepherd Nova](https://nes-lab.github.io/shepherd-nova/) testbed!
+This page describes the physical layout and wireless connectivity between nodes.
 
-- a dense cluster on the south side of the office-map,
-- a bottleneck on the west side between II62 and II75, which allows
-- an (elongated) U-shaped network by disabling certain nodes or reducing transmit power
+This is our first public instance of the Shepherd testbed, called .
+It is available for experiments all around the clock (24/7) and is deployed in the cfaed offices of the Barkhausen Bau at TU Dresden.
 
-## Deployment
+The test-network consists of 24 observer nodes, that are distributed on the whole floor.
 
-Below is a screenshot of the [Campus-Navigator](https://navigator.tu-dresden.de/etplan/bar/02) with marked node-positions.
+## Physical Deployment
+
+Our testbed is located in the cfaed offices of the Barkhausen Bau at TU Dresden.
+It consists of **24 observer nodes** that form a ring‑shaped network, largely determined by the building’s ventilation system.
+The many metal vents inside the ventilation system block radio signals, creating a realistic and challenging wireless environment.
+
+### Key Topological Features
+
+In addition to that ring-network, you can find or create the following topological features.
+
+- **Dense cluster** on the south side of the office-map - ideal for experiments that require many nodes with direct links
+- **Bottleneck** between offices II62 and II75 on the west side - useful for testing multi-hop routing
+- (elongated) **U-shaped network** can be created by disabling certain nodes or reducing transmit power
+
+### Floor Plan
+
+The map below from the [Campus-Navigator](https://navigator.tu-dresden.de/etplan/bar/02) shows the exact positions of the nodes.
 
 ```{figure} /media/cfaed_floorplan_with_nodes.png
 :align: center
@@ -23,7 +36,15 @@ Most horizontal walls are concrete, while the walls between offices are drywall.
 
 ## Link-Matrix
 
-The link-matrix of the testbed is currently measured mostly after changes in deployment.
+The link-matrix shows the measured **RSSI (Received Signal Strength Indicator) values in dBm** between every pair of nodes.
+This data helps you understand the network and configure custom topologies.
+
+- **Rows (Tx)** represent the transmitter
+- **Columns (Rx)** represent the receiver
+- **Empty cells** have no direct link
+- `dBm` is a logarithmic unit of power - higher values (closer to 0) are stronger links (e.g. -30 dBm is very strong, -90 dBm is very weak)
+
+Updates are currently done manually - mainly after changes in deployment.
 It is planned to offer weekly scans in the future while also keeping the history available.
 A collection of past measurements and network-layouts is available [here](https://github.com/nes-lab/shepherd-nova/tree/main/docs/link_matrix).
 
@@ -63,5 +84,12 @@ Tx⟍Rx     1     2     3     4     5     6     7     8     9    10    11    12 
 :align: center
 :alt: Observer node deployed in conference room II62
 
-Observer node deployed in conference room II62.
+Observer node deployed in conference room II62. It is mounted under the ceiling-duct and connected and powered via ethernet.
+```
+
+```{figure} /media/deployment_pre-assembly.jpg
+:align: center
+:alt: Observer nodes assembled - before deployment
+
+Observer nodes are assembled and tested - right before deployment.
 ```
