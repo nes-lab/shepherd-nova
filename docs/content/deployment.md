@@ -1,12 +1,8 @@
 # Instance at TU Dresden
 
 Welcome to the first public deployment of the [Shepherd Nova](https://nes-lab.github.io/shepherd-nova/) testbed!
+It is available for experiments all around the clock (24/7).
 This page describes the physical layout and wireless connectivity between nodes.
-
-This is our first public instance of the Shepherd testbed, called .
-It is available for experiments all around the clock (24/7) and is deployed in the cfaed offices of the Barkhausen Bau at TU Dresden.
-
-The test-network consists of 24 observer nodes, that are distributed on the whole floor.
 
 ## Physical Deployment
 
@@ -37,16 +33,6 @@ Most horizontal walls are concrete, while the walls between offices are drywall.
 ## Link-Matrix
 
 The link-matrix shows the measured **RSSI (Received Signal Strength Indicator) values in dBm** between every pair of nodes.
-This data helps you understand the network and configure custom topologies.
-
-- **Rows (Tx)** represent the transmitter
-- **Columns (Rx)** represent the receiver
-- **Empty cells** have no direct link
-- `dBm` is a logarithmic unit of power - higher values (closer to 0) are stronger links (e.g. -30 dBm is very strong, -90 dBm is very weak)
-
-Updates are currently done manually - mainly after changes in deployment.
-It is planned to offer weekly scans in the future while also keeping the history available.
-A collection of past measurements and network-layouts is available [here](https://github.com/nes-lab/shepherd-nova/tree/main/docs/link_matrix).
 
 ```{code-block}
 :caption: [TrafficBench](https://github.com/nes-lab/TrafficBench) RF-survey via [example-script](https://github.com/nes-lab/shepherd-webapi/blob/main/shepherd_client/examples/e3_experiment_create_and_schedule.py) from 2026-04-07, values in dBm
@@ -77,6 +63,17 @@ Tx⟍Rx     1     2     3     4     5     6     7     8     9    10    11    12 
   23 |  -73   -61   -47   -37   -42   -42   -50   -38   -61   -73   -64   -85   -87                                                               -40
   24 |  -68   -66   -47   -39   -31   -38   -58   -42   -57   -69   -60                                                                     -39
 ```
+
+This data helps you understand the network and configure custom topologies.
+
+- **Rows (Tx)** represent the transmitter
+- **Columns (Rx)** represent the receiver
+- **Empty cells** have no direct link
+- `dBm` is a logarithmic unit of power - higher values (closer to 0) are stronger links (e.g. -30 dBm is very strong, -90 dBm is very weak)
+
+Updates are currently done manually - mainly after changes in deployment.
+It is planned to offer weekly scans in the future while also keeping the history available.
+A collection of past measurements and network-layouts is available [here](https://github.com/nes-lab/shepherd-nova/tree/main/docs/link_matrix).
 
 ## Impressions
 
