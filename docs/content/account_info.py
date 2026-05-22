@@ -4,5 +4,5 @@
 from shepherd_client import Client
 
 client = Client()
-print(client.get_user_info())
+print(client.get_account_info())
 # end example
