@@ -3,6 +3,7 @@
 ## Getting an Account
 
 If you are interested in trying out the testbed, please contact us via mail: <testbed@nes-lab.org>.
+
 We will provide you a registration-token in time.
 This token is bound to your e-mail address, has no time-limit and allows [creating an account](#registration-access).
 Please read through the [disclaimer](/about/disclaimer.md) and [privacy policy](/about/privacy.md) prior to registration.
@@ -31,7 +32,7 @@ It also gives examples for getting a feeling to estimate the result size.
 
 ## Registration & Access
 
-To access the testbed, you will need the webclient written in Python.
+To access the testbed, you currently need the webclient written in Python.
 You can install the client by using the package-manager of your choice.
 In the following case we use pip:
 
@@ -66,4 +67,6 @@ Once saved, you can omit the credentials, as shown here:
 :end-before: end example
 ```
 
+That's it!
+Your account is now activated.
 The next steps for creating an actual experiment are explained in the [getting started guide](/content/getting_started.md)
