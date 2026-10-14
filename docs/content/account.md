@@ -37,7 +37,7 @@ You can install the client by using the package-manager of your choice.
 In the following case we use pip:
 
 ```Shell
-pip3 install shepherd-client -U
+pip3 install shepherd-client --upgrade
 ```
 
 With it, you can manage your account and experiments.
