@@ -174,3 +174,44 @@ During recording the raw values from the ADCs are not altered, but stored as is 
 This would allow for later re-calibration and easily correcting the result-files, in case an issue is found with an individual calibration.
 Calibrations made two years apart showed excellent long time stability of the frontend.
 More details can be found in the paper.
+
+## Benchmarks
+
+To give a feeling for what's possible, we ran a performance-analys on the observers.
+The results will be updated from time to time and are from 2026-10-14.
+
+
+| type                          | cpu_min | cpu_max | cpu_mean | MiB/s | note      |
+|-------------------------------|---------|---------|----------|-------|-----------|
+| EMU IV ShpInput ivtrace       | 39      | 56      | 50.0     | 0.479 |           |
+| EMU IV ShpInput notrace       | 13      | 40      | 23.9     | 0.001 |           |
+| EMU IV hrvformat ivtrace      | 11      | 61      | 47.4     | 0.479 |           |
+| EMU IV hrvformat notrace      | 12      | 52      | 22.4     | 0.001 |           |
+| EMU GPIO datarate=57600       | 36      | 75      | 49.3     | 0.275 |           |
+| EMU GPIO datarate=115200      | 39      | 100     | 57.5     | 0.361 |           |
+| EMU GPIO datarate=230400      | 50      | 91      | 63.1     | 0.525 |           |
+| EMU GPIO datarate=460800      | 66      | 99      | 77.0     | 0.767 |           |
+| EMU GPIO datarate=921600      | 64      | 100     | 96.1     | 1.131 | high load |
+| EMU GPIO datarate=1000000     | 69      | 100     | 99.4     | 1.217 | high load |
+| EMU power @ samplerate=10     | 13      | 70      | 46.7     | 0.001 |           |
+| EMU power @ samplerate=100    | 19      | 72      | 48.6     | 0.002 |           |
+| EMU power @ samplerate=1000   | 11      | 75      | 50.6     | 0.005 |           |
+| EMU power @ samplerate=100000 | 13      | 77      | 52.2     | 0.360 |           |
+| EMU iv @ samplerate=10        | 24      | 56      | 38.9     | 0.001 |           |
+| EMU iv @ samplerate=100       | 24      | 59      | 39.2     | 0.002 |           |
+| EMU iv @ samplerate=1000      | 24      | 63      | 39.8     | 0.006 |           |
+| EMU iv @ samplerate=100000    | 36      | 62      | 52.5     | 0.479 |           |
+
+A mean cpu-utilization below 80 % is considered "safe" for the testbed.
+So GPIO-Tracing of continuous 460 kBaud UART should work for longer experiments.
+For short-term experiments and data-bursts it also works with much higher data-rates (i.e. 1 MBaud) as results are buffered in RAM on the observer.
+For more headroom it is possible to either disable Power-Tracing (notrace-entry) or use it with a custom sample-rate.
+
+Due to using fully random data these numbers should be a worst-case estimation.
+Every result-file contains cpu-utilization and other stats that can be extracted with:
+
+```Shell
+`shepherd-data extract-meta --debug ./file`
+```
+
+Benchmark-data is taken from [shepherd-main](https://github.com/nes-lab/shepherd/blob/main/software/python-package/tests_manual/benchmark_modes_results.md). The document contains raw data from before, in between & after.
