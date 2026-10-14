@@ -33,6 +33,7 @@ Most horizontal walls are concrete, while the walls between offices are drywall.
 ## Link-Matrix
 
 The link-matrix shows the measured **RSSI (Received Signal Strength Indicator) values in dBm** between every pair of nodes.
+The transmit-power for each node is set to 8 dBm.
 
 ```{code-block}
 :caption: [TrafficBench](https://github.com/nes-lab/TrafficBench) RF-survey via [example-script](https://github.com/nes-lab/shepherd-webapi/blob/main/shepherd_client/examples/e3_experiment_create_and_schedule.py) from 2026-06-29, values in dBm
