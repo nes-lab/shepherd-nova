@@ -211,7 +211,7 @@ Due to using fully random data these numbers should be a worst-case estimation.
 Every result-file contains cpu-utilization and other stats that can be extracted with:
 
 ```Shell
-`shepherd-data extract-meta --debug ./file`
+shepherd-data extract-meta --debug ./file
 ```
 
 Benchmark-data is taken from [shepherd-main](https://github.com/nes-lab/shepherd/blob/main/software/python-package/tests_manual/benchmark_modes_results.md). The document contains raw data from before, in between & after.
