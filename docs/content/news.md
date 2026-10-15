@@ -1,6 +1,6 @@
 # News and upcoming Events
 
-- 2026-10-14: the latest QoL-Update fixes a lot of the bug-sources seen in recently failed experiments. Also, performance of the observers is improved substantially! There should be no harm in activating power-tracing and gpio-tracing at the same time anymore. Because of that the server now accepts experiments with custom samplerates in PowerTracing(). See newly added [benchmark-results for more](/content/infrastructure.md#benchmarks).
+- 2026-10-14: the latest QoL-Update fixes a lot of the bug-sources seen in recently failed experiments. Also, the performance of the observers was improved. There should be no harm in activating power-tracing and gpio-tracing at the same time anymore. Because of that the server now accepts experiments with custom samplerates in PowerTracing(). See newly added [benchmark-results for more](/content/infrastructure.md#benchmarks).
 
 ## Past Events
 

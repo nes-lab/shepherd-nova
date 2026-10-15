@@ -177,35 +177,34 @@ More details can be found in the paper.
 
 ## Benchmarks
 
-To give a feeling for what's possible, we ran a performance-analysis on the observers.
-The current results are from 2026-10-14 and will be updated from time to time.
+To give a feeling for what's possible, we ran several 1-minute performance-analysis on the observers.
+The current results are from 2026-10-15 and will be updated after major changes.
 
+| Type                          | CPU_min [%] | CPU_max [%] | CPU_mean [%] | File [MiB/s] | Note      |
+|-------------------------------|-------------|-------------|--------------|--------------|-----------|
+| EMU IV ShpInput ivtrace       | 25          | 83          | 61.0         | 0.475        |           |
+| EMU IV ShpInput notrace       | 15          | 60          | 34.7         | 0.002        |           |
+| EMU IV hrvformat ivtrace      | 31          | 86          | 61.1         | 0.476        |           |
+| EMU IV hrvformat notrace      | 23          | 55          | 38.8         | 0.002        |           |
+| EMU GPIO datarate=57600       | 50          | 95          | 65.2         | 0.310        |           |
+| EMU GPIO datarate=115200      | 55          | 100         | 70.0         | 0.392        |           |
+| EMU GPIO datarate=230400      | 65          | 100         | 79.0         | 0.547        |           |
+| EMU GPIO datarate=460800      | 77          | 100         | 92.7         | 0.787        | high load |
+| EMU GPIO datarate=921600      | 78          | 100         | 98.9         | 1.146        | high load |
+| EMU GPIO datarate=1000000     | 77          | 100         | 99.1         | 1.238        | high load |
+| EMU power @ samplerate=10     | 42          | 73          | 59.1         | 0.002        |           |
+| EMU power @ samplerate=100    | 33          | 79          | 60.1         | 0.002        |           |
+| EMU power @ samplerate=1000   | 49          | 72          | 63.0         | 0.006        |           |
+| EMU power @ samplerate=100000 | 48          | 86          | 66.5         | 0.357        |           |
+| EMU iv @ samplerate=10        | 35          | 73          | 51.4         | 0.002        |           |
+| EMU iv @ samplerate=100       | 37          | 61          | 51.2         | 0.002        |           |
+| EMU iv @ samplerate=1000      | 36          | 61          | 51.3         | 0.006        |           |
+| EMU iv @ samplerate=100000    | 44          | 96          | 65.9         | 0.477        |           |
 
-| type                          | CPU_max [%] | CPU_mean [%] | File [MiB/s] | note      |
-|-------------------------------|-------------|--------------|--------------|-----------|
-| EMU IV ShpInput ivtrace       | 56          | 50.0         | 0.479        |           |
-| EMU IV ShpInput notrace       | 40          | 23.9         | 0.001        |           |
-| EMU IV hrvformat ivtrace      | 61          | 47.4         | 0.479        |           |
-| EMU IV hrvformat notrace      | 52          | 22.4         | 0.001        |           |
-| EMU GPIO datarate=57600       | 75          | 49.3         | 0.275        |           |
-| EMU GPIO datarate=115200      | 100         | 57.5         | 0.361        |           |
-| EMU GPIO datarate=230400      | 91          | 63.1         | 0.525        |           |
-| EMU GPIO datarate=460800      | 99          | 77.0         | 0.767        |           |
-| EMU GPIO datarate=921600      | 100         | 96.1         | 1.131        | high load |
-| EMU GPIO datarate=1000000     | 100         | 99.4         | 1.217        | high load |
-| EMU power @ samplerate=10     | 70          | 46.7         | 0.001        |           |
-| EMU power @ samplerate=100    | 72          | 48.6         | 0.002        |           |
-| EMU power @ samplerate=1000   | 75          | 50.6         | 0.005        |           |
-| EMU power @ samplerate=100000 | 77          | 52.2         | 0.360        |           |
-| EMU iv @ samplerate=10        | 56          | 38.9         | 0.001        |           |
-| EMU iv @ samplerate=100       | 59          | 39.2         | 0.002        |           |
-| EMU iv @ samplerate=1000      | 63          | 39.8         | 0.006        |           |
-| EMU iv @ samplerate=100000    | 62          | 52.5         | 0.479        |           |
-
-A mean cpu-utilization below 80 % is considered "safe" for the testbed.
-So GPIO-Tracing of continuous 460 kBaud UART should work for longer experiments.
+A mean cpu-utilization below 90 % is considered "safe" for the testbed.
+So GPIO-Tracing of continuous 230 kBaud UART should work for longer experiments.
 For short-term experiments and data-bursts it also works with much higher data-rates (i.e. 1 MBaud) as results are buffered in RAM on the observer.
-For more headroom it is possible to either disable Power-Tracing (notrace-entry) or use it with a custom sample-rate.
+For more headroom it is possible to either disable Power-Tracing (notrace-entry) or use it with a custom lower sample-rate.
 
 Due to using fully random data these numbers should be a worst-case estimation.
 Every result-file contains cpu-utilization and other stats that can be extracted with:
