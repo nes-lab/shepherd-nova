@@ -33,4 +33,4 @@ cd ./docs/_build/html
 python -m http.server
 ```
 
-In browser go to [localhost:8000]() to view the documentation.
+Open <localhost:8000> in browser to view the documentation.

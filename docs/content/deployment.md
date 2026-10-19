@@ -35,7 +35,7 @@ Most horizontal walls are concrete, while the walls between offices are drywall.
 The link-matrix shows the measured **RSSI (Received Signal Strength Indicator) values in dBm** between every pair of nodes.
 The transmit-power for each node is set to 8 dBm.
 
-```{code-block}
+```text {code-block}
 :caption: [TrafficBench](https://github.com/nes-lab/TrafficBench) RF-survey via [example-script](https://github.com/nes-lab/shepherd-webapi/blob/main/shepherd_client/examples/e3_experiment_create_and_schedule.py) from 2026-06-29, values in dBm
 Tx⟍Rx     1     2     3     4     5     6     7     8     9    10    11    12    13    14    15    16    17    18    19    20    21    22    23    24
      +-----------------------------------------------------------------------------------------------------------------------------------------------
@@ -74,7 +74,7 @@ This data helps you understand the network and configure custom topologies.
 
 Updates are currently done manually - mainly after changes in deployment.
 It is planned to offer weekly scans in the future while also keeping the history available.
-A collection of past measurements and network-layouts is available [here](https://github.com/nes-lab/shepherd-nova/tree/main/docs/link_matrix).
+A collection of past measurements and [network-layouts is available here](https://github.com/nes-lab/shepherd-nova/tree/main/docs/link_matrix).
 
 ## Impressions
 

@@ -6,7 +6,7 @@ Whether you are developing new algorithms or communication protocols, our distri
 Shepherd is a distributed platform for rigorous experiments under repeatable energy-harvesting conditions.
 In simpler terms, the testbed helps explore ways to eliminate the need for batteries and their potentially harmful chemistry.
 
-## 🎉 Welcome!
+## 🎉 Welcome
 
 If you're new here, don't worry — Shepherd Nova is designed to make advanced experiments simple and accessible.
 You get a professional test environment with sensible defaults, so you can control the steepness of the learning curve.
@@ -20,7 +20,7 @@ Direct Link: <https://testbed.nes-lab.org/>
 ### For Newcomers
 
 - No hardware lab required — Access a professional testbed from your desk.
-- [Guided Setup](content/getting_started.md) — No deep hardware knowledge required. We provide tools and documentation to get your first experiment running quickly.
+- [Guided Setup](/content/getting_started.md) — No deep hardware knowledge required. We provide tools and documentation to get your first experiment running quickly.
 - Everything included — From power management to logging, the testbed handles the heavy lifting.
 - Focus on your code — Upload your firmware, define energy conditions, and let the system do the rest.
 

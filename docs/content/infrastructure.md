@@ -4,7 +4,12 @@ Shepherd Nova comprises several distributed nodes and backend servers connected 
 Each node includes an observer and up to two devices under test, called targets.
 Typical targets are low-power IoT devices equipped with MCU, wireless transceivers, and peripherals such as sensors.
 The observers implement all services in hardware and software, emulating energy-harvesting conditions and collecting time-stamped observations.
-The backend servers provide harvesting data for emulation to the observers, store observations, coordinate observer operations (e.g. starting and stopping experiments), and interact with users who provide the target firmware and configuration of an experiment.
+The backend servers
+
+- provide harvesting data for emulation to the observers,
+- store observations,
+- coordinate observer operations (e.g. starting and stopping experiments),
+- and interact with users who provide the target firmware and configuration of an experiment.
 
 Please consult [the paper](https://dl.acm.org/doi/10.1145/3711875.3729146) for an in-depth system description.
 The paper also evaluates topics like faithfulness and repeatability - the cornerstones of the testbed.
@@ -76,14 +81,23 @@ It makes no sense to list every error-case, but to pick a few:
 - misbehaving sync between system and PRUs (which can be a result of a flaky outer sync)
 - a tracer that misses starting time or ends too early is detected
 - The supervisor for the buffers can detect backpressure, under- & **overflows**, and also **harmed canaries** between separate RAM-sections
-  - Note: **backpressure** can occur when the gpio-tracer samples more data (capable of 1000+ kSps) than the filesystem can handle (~ 400 kSps). In that case buffer-sections need to be skipped to keep the system responsive. This will produce a timestamped error-log.
+
+```text {note}
+**backpressure** can occur when the gpio-tracer samples more data (capable of 1000+ kSps) than the filesystem can handle (~ 400 kSps) over a certain time.
+In that case buffer-sections need to be skipped to keep the system responsive. This will produce a timestamped error-log.
+```
 
 ### Statistics
 
 In addition to the discrete warnings each observer also records & timestamps utilization statistics:
 
-- **PRU0** running the virtual source monitors it's average and **worst case execution time** (WCET). The recorder will additionally warn about broken real-time conditions. This is important as it delays the following chip-select flank for triggering the ADC isochronously.
-- **PRU1** running the GPIO-Tracer monitors the **worst timedelta** between reading GPIO-states. Shepherd guarantees 1 MSps, but often surpasses that. In comparison to tracing power, the sampling rate is not fixed. Just checking unchanged states currently (May 2025) results in 1.4 MHz minimal, 2.2 MHz mean and 2.9 MHz maximum rate. When states change and data has to be written, the rates will degrade to 1.1, 1.6 & 1.7 MHz respectively.
+- **PRU0** running the virtual source monitors it's average and **worst case execution time** (WCET).
+  - The recorder will additionally warn about broken real-time conditions. This is important as it delays the following chip-select flank for triggering the ADC isochronously.
+- **PRU1** running the GPIO-Tracer monitors the **worst timedelta** between reading GPIO-states.
+  - Shepherd guarantees 1 MSps, but often surpasses that.
+  - In comparison to tracing power, the sampling rate is not fixed.
+  - Just checking unchanged states currently (May 2025) results in 1.4 MHz minimal, 2.2 MHz mean and 2.9 MHz maximum rate.
+  - When states change and data has to be written, the rates will degrade to 1.1, 1.6 & 1.7 MHz respectively.
 - Linux allows recording **system utilization**, specifically from CPU, RAM, network-IO & filesystem-IO
 - Linux also allows recording synchronization **statistics** from **NTP, PTP and PHC2SYS**
 
@@ -97,7 +111,7 @@ This won't make the system perfect, but at least catches a big chunk of possible
 
 As an example for our testing - the software-stack of the observer offers a special **loopback-test** to validate data-consistency for the following route used by emulation-experiments:
 
-```
+```text
     Input-File
       ↪ pySheep
         ↪ Input-RAM-Buffer
@@ -139,7 +153,7 @@ The figure above shows the relative sync between two exemplary observers in the 
 Signals were taken from the chip-select input of the ADC as it is precisely controlled by **PRU0** for **isochronous triggering**.
 This measurement takes the whole synchronization-chain into account and exposes underlying flaws and misbehavior.
 
-```{seealso}
+```text {seealso}
 1) Documentation of the measurements (benchmarking different systems) can be found [in the main repo](https://nes-lab.github.io/shepherd/dev/time_sync_analysis/readme.html).
 2) Additional information about the PI-controller and an accompanying simulation can be found in the [source-directory](https://github.com/nes-lab/shepherd/tree/main/software/kernel-module) of the kernel module.
 ```
@@ -149,19 +163,24 @@ This measurement takes the whole synchronization-chain into account and exposes 
 The main routines for the virtual power source run on the **PRU0**-coprocessor.
 Besides being partly covered by unittests, these routines unfortunately act largely like a black box.
 Debugging the PRUs is hardly possible.
-To counteract the issue, we took three additional steps:
+To counteract the issue, we took four additional steps:
 
 - **mathematical models**, behaviors and parameters were explored, extended & validated during two master theses.
-- The virtual power source, including the harvester, was fully ported to python as a 1:1 functional-copy. A **simulation** can be run by adding a virtual target. Internal states and behaviors can be easily debugged similar to [Simba](https://github.com/LENS-TUGraz/simba). While Simba was not designed with real-time-capablities and hardware-in-the-loop in mind, both concepts have similar goals.
+- The virtual power source, including the harvester, was fully ported to python as a 1:1 functional-copy.
+  - A **simulation** can be run by adding a virtual target.
+  - Internal states and behaviors can be easily debugged similar to [Simba](https://github.com/LENS-TUGraz/simba). While Simba was not designed with real-time-capablities and hardware-in-the-loop in mind, both concepts have similar goals.
 - parts of the PRU-code can be tested by abstracting the analog frontend.
-- The C-code, running inside the PRU, can be compiled to a shared library with a c-types interface for python. Beside the python-port, this can act as an additional plugin-replacement for an emulation experiment. All three versions can be (and were) [**benchmarked against each other**](https://github.com/nes-lab/shepherd/tree/main/software/debug_compare_vsources).
+- The C-code, running inside the PRU, can be compiled to a shared library with a c-types interface for python.
+  - Beside the python-port, this can act as an additional plugin-replacement for an emulation experiment.
+  - All three versions can be (and were) [**benchmarked against each other**](https://github.com/nes-lab/shepherd/tree/main/software/debug_compare_vsources).
 
 For more insight during the actual emulation the user can leverage the following config and data:
 
 - the power-good-signals (battery OK hysteresis) for the target is recorded together with the GPIO-Trace
-- it's possible to record the voltage levels and output-current of the virtual energy storage instead of the direct target input - this is helpful for configurations with static output voltage (i.e. buck-converter)
+- it's possible to record the voltage levels and output-current of the virtual energy storage instead of the direct target input
+  - helpful for configurations with static output voltage (i.e. buck-converter)
 
-```{seealso}
+```text {seealso}
 More details can be found in the [section covering the virtual power source](/content/virtual_source.md).
 ```
 

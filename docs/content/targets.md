@@ -16,7 +16,7 @@ We went a step further and made sure that disabled features have even less of an
 To continue with the GPIO topic - analog switches with a very low leakage current (in the nano-amp-scale) are used to separate GPIO traces from the observer if the feature is not in use.
 This way users with sensitive power-measurements can make sure that the results are least skewed.
 
-```{note}
+```text {note}
 Shepherd Nova has a second (unused) target-port on each observer and our team is [looking for ideas](https://github.com/nes-lab/shepherd-targets/issues/68).
 ```
 
@@ -111,7 +111,8 @@ The table below lists all shared pins between MCUs and Observers with **Cape V2.
 **Note**:
 
 - GPIO12 to GPIO15 are not recordable by the testbed with cape V2.5, as pins on the SBC are all used up
-- The nRF has no outer reset line - so configuring one could keep the MCU in permanent reset. Code for the nRF52-DK may use P0.21 for reset - it is actively used for UART-Rx here.
+- The nRF has no outer reset line - so configuring one could keep the MCU in permanent reset.
+  - Code for the nRF52-DK may use P0.21 for reset - it is actively used for UART-Rx here.
 - A, B, C in DIR-Column refer to switch-groups. 1, 2 and/or 4 bits can be reversed to talk to the target.
 - D, E are switch-groups needed for programming
 
