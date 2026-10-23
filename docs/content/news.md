@@ -1,12 +1,17 @@
 # News and upcoming Events
 
-## October 2026 - Release of a QoL-Update
+## October 2026 - Release of two QoL-Update
 
-This update fixes a lot of the bug-sources seen in recently failed experiments.
+Both updates fix a lot of the bug-sources seen in recently failed experiments.
 Also, the performance of the observers was improved.
 There should be no harm in activating power-tracing and gpio-tracing at the same time anymore.
 Because of that the server now accepts experiments with custom samplerates in PowerTracing().
 See newly added [benchmark-results for more](/content/infrastructure.md#benchmarks).
+
+```text {attention}
+Experiments that fail because of a high sync-offset are most likely caused by too much traffic on the network. Reducing data-rates should fix that (lower samplerates, only record power, ...).
+This is an ongoing issue and will hopefully be fixed in the near future.
+```
 
 ## Past Events
 
