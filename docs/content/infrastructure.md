@@ -197,7 +197,32 @@ More details can be found in the paper.
 ## Benchmarks
 
 To give a feeling for what's possible, we ran several 1-minute performance-analysis on the observers.
-The current results are from 2026-10-23 and will be updated after major changes.
+The results will be updated after major changes.
+
+Due to using fully random data these numbers should be a worst-case estimation.
+Every result-file contains cpu-utilization and other stats that can be extracted with:
+
+```Shell
+shepherd-data extract-meta --debug ./file
+```
+
+A mean cpu-utilization below 90 % is considered "safe" for the testbed.
+The current software is heavily optimized and should stay in line when using the system [within specs](#statistics).
+As all recorded data on the observers is buffered in RAM it is possible to exceed thresholds within burst or in short-term experiments.
+For more headroom it is possible to either disable Power-Tracing (notrace-entry) or use it with a custom lower sample-rate.
+
+Recordings for GPIO and UART were benchmarked with a special high-throughput [uart-firmware on the targets](https://github.com/nes-lab/shepherd-targets/tree/main/firmware/nrf52_benchmark_uart).
+The Readme explains the actual rates and the methodology.
+
+More critical is the load on the network.
+The overload is caused by excessive write-rates and users see failed experiments as a symptom or result.
+When the testbed reports high PTP-Sync offsets, it is most likely caused by a network congestion.
+
+Benchmark-data is taken from [shepherd-main](https://github.com/nes-lab/shepherd/blob/main/software/python-package/tests_manual/benchmark_modes_results.md). The document contains raw data from before, in between & after.
+
+### Benchmark from 2026-10-23 - Second Update
+
+TLDR: CPU-Utilization lowered 15 to 30 % points compared to update 1 and is now 25-40 %-points below baseline. It makes GPIO-Tracing with fast data-rates possible.
 
 | Type                          | CPU_min [%] | CPU_max [%] | CPU_mean [%] | File [MiB/s] | Note |
 |-------------------------------|-------------|-------------|--------------|--------------|------|
@@ -226,28 +251,9 @@ The current results are from 2026-10-23 and will be updated after major changes.
 | EMU IV @ samplerate=10000     | 11          | 45          | 31.1         | 0.050        |      |
 | EMU IV @ samplerate=100000    | 31          | 72          | 43.9         | 0.476        |      |
 
-Due to using fully random data these numbers should be a worst-case estimation.
-Every result-file contains cpu-utilization and other stats that can be extracted with:
-
-```Shell
-shepherd-data extract-meta --debug ./file
-```
-
-A mean cpu-utilization below 90 % is considered "safe" for the testbed.
-The current software is heavily optimized and should stay in line when using the system [within specs](#statistics).
-As all recorded data on the observers is buffered in RAM it is possible to exceed thresholds within burst or in short-term experiments.
-For more headroom it is possible to either disable Power-Tracing (notrace-entry) or use it with a custom lower sample-rate.
-
-Recordings for GPIO and UART were benchmarked with a special high-throughput [uart-firmware on the targets](https://github.com/nes-lab/shepherd-targets/tree/main/firmware/nrf52_benchmark_uart).
-The Readme explains the actual rates and the methodology.
-
-More critical is the load on the network.
-The overload is caused by excessive write-rates and users see failed experiments as a symptom or result.
-When the testbed reports high PTP-Sync offsets, it is most likely caused by a network congestion.
-
-Benchmark-data is taken from [shepherd-main](https://github.com/nes-lab/shepherd/blob/main/software/python-package/tests_manual/benchmark_modes_results.md). The document contains raw data from before, in between & after.
-
 ### Benchmark from 2026-10-15 - First Update
+
+TLDR: Filesize was roughly halved. CPU-Utilization decrease by about 10 %-points.
 
 | Type                          | CPU_min [%] | CPU_max [%] | CPU_mean [%] | File [MiB/s] | Note      |
 |-------------------------------|-------------|-------------|--------------|--------------|-----------|
@@ -272,15 +278,15 @@ Benchmark-data is taken from [shepherd-main](https://github.com/nes-lab/shepherd
 
 ### Benchmark from 2026-10-07 - Baseline
 
-| type                          | cpu_min | cpu_max | cpu_mean | MiB/s | note                   |
-|-------------------------------|---------|---------|----------|-------|------------------------|
-| EMU IV ShpInput ivtrace       | 54      | 100     | 72.5     | 1.087 | had errors, incomplete |
-| EMU IV ShpInput notrace       | 31      | 100     | 44.5     | 0.002 |                        |
-| EMU Power & samplerate=10     | 47      | 100     | 63.8     | 0.003 |                        |
-| EMU Power & samplerate=100    | 52      | 93      | 64.3     | 0.003 |                        |
-| EMU Power & samplerate=1000   | 57      | 100     | 69.5     | 0.010 |                        |
-| EMU Power & samplerate=100000 | 68      | 100     | 82.8     | 0.501 |                        |
-| EMU IV & samplerate=10        | 42      | 88      | 56.7     | 0.003 |                        |
-| EMU IV & samplerate=100       | 44      | 100     | 58.6     | 0.003 |                        |
-| EMU IV & samplerate=1000      | 44      | 100     | 58.6     | 0.010 |                        |
-| EMU IV & samplerate=100000    | 66      | 100     | 79.1     | 0.687 |                        |
+| Type                          | CPU_min [%] | CPU_max [%] | CPU_mean [%] | File [MiB/s] | Note                   |
+|-------------------------------|-------------|-------------|--------------|--------------|------------------------|
+| EMU IV ShpInput ivtrace       | 54          | 100         | 72.5         | 1.087        | had errors, incomplete |
+| EMU IV ShpInput notrace       | 31          | 100         | 44.5         | 0.002        |                        |
+| EMU Power & samplerate=10     | 47          | 100         | 63.8         | 0.003        |                        |
+| EMU Power & samplerate=100    | 52          | 93          | 64.3         | 0.003        |                        |
+| EMU Power & samplerate=1000   | 57          | 100         | 69.5         | 0.010        |                        |
+| EMU Power & samplerate=100000 | 68          | 100         | 82.8         | 0.501        |                        |
+| EMU IV & samplerate=10        | 42          | 88          | 56.7         | 0.003        |                        |
+| EMU IV & samplerate=100       | 44          | 100         | 58.6         | 0.003        |                        |
+| EMU IV & samplerate=1000      | 44          | 100         | 58.6         | 0.010        |                        |
+| EMU IV & samplerate=100000    | 66          | 100         | 79.1         | 0.687        |                        |
