@@ -222,10 +222,7 @@ Benchmark-data is taken from [shepherd-main](https://github.com/nes-lab/shepherd
 
 ### Benchmark 2026-10-23 - Second Perf-Update
 
-**TLDR:**
-
-- CPU-Utilization is 25-40 %pt below baseline
-- GPIO-Tracing with fast data-rates is now possible
+**TLDR:** CPU-Utilization is 25-40 %pt below baseline; GPIO-Tracing with fast data-rates is now possible;
 
 | Type                          | CPU_min [%] | CPU_max [%] | CPU_mean [%] | File [MiB/s] | Note |
 |-------------------------------|-------------|-------------|--------------|--------------|------|
@@ -256,10 +253,7 @@ Benchmark-data is taken from [shepherd-main](https://github.com/nes-lab/shepherd
 
 ### Benchmark 2026-10-15 - First Perf-Update
 
-**TLDR:**
-
-- filesize was roughly halved
-- CPU-Utilization decreases by ~ 10 %pt compared to baseline
+**TLDR:** Filesize was roughly halved; CPU-Utilization decreases by ~ 10 %pt compared to baseline;
 
 | Type                          | CPU_min [%] | CPU_max [%] | CPU_mean [%] | File [MiB/s] | Note      |
 |-------------------------------|-------------|-------------|--------------|--------------|-----------|
