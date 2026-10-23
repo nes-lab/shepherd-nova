@@ -220,9 +220,12 @@ When the testbed reports high PTP-Sync offsets, it is most likely caused by a ne
 
 Benchmark-data is taken from [shepherd-main](https://github.com/nes-lab/shepherd/blob/main/software/python-package/tests_manual/benchmark_modes_results.md). The document contains raw data from before, in between & after.
 
-### Benchmark from 2026-10-23 - Second Update
+### Benchmark 2026-10-23 - Second Perf-Update
 
-TLDR: CPU-Utilization lowered 15 to 30 % points compared to update 1 and is now 25-40 %-points below baseline. It makes GPIO-Tracing with fast data-rates possible.
+**TLDR:**
+
+- CPU-Utilization is 25-40 %pt below baseline
+- GPIO-Tracing with fast data-rates is now possible
 
 | Type                          | CPU_min [%] | CPU_max [%] | CPU_mean [%] | File [MiB/s] | Note |
 |-------------------------------|-------------|-------------|--------------|--------------|------|
@@ -251,9 +254,12 @@ TLDR: CPU-Utilization lowered 15 to 30 % points compared to update 1 and is now 
 | EMU IV @ samplerate=10000     | 11          | 45          | 31.1         | 0.050        |      |
 | EMU IV @ samplerate=100000    | 31          | 72          | 43.9         | 0.476        |      |
 
-### Benchmark from 2026-10-15 - First Update
+### Benchmark 2026-10-15 - First Perf-Update
 
-TLDR: Filesize was roughly halved. CPU-Utilization decrease by about 10 %-points.
+**TLDR:**
+
+- filesize was roughly halved
+- CPU-Utilization decreases by ~ 10 %pt compared to baseline
 
 | Type                          | CPU_min [%] | CPU_max [%] | CPU_mean [%] | File [MiB/s] | Note      |
 |-------------------------------|-------------|-------------|--------------|--------------|-----------|
@@ -276,7 +282,7 @@ TLDR: Filesize was roughly halved. CPU-Utilization decrease by about 10 %-points
 | EMU IV @ samplerate=1000      | 36          | 61          | 51.3         | 0.006        |           |
 | EMU IV @ samplerate=100000    | 44          | 96          | 65.9         | 0.477        |           |
 
-### Benchmark from 2026-10-07 - Baseline
+### Benchmark 2026-10-07 - Baseline
 
 | Type                          | CPU_min [%] | CPU_max [%] | CPU_mean [%] | File [MiB/s] | Note                   |
 |-------------------------------|-------------|-------------|--------------|--------------|------------------------|
