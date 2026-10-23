@@ -2,7 +2,7 @@
 
 ## October 2026
 
-Release of two QoL-Updates! 
+Release of two QoL-Updates!
 Both updates fix a lot of the bug-sources seen in recently failed experiments.
 Also, the performance of the observers was improved.
 There should be no harm in activating power-tracing and gpio-tracing at the same time anymore.
