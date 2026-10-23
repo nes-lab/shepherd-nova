@@ -9,7 +9,11 @@ Because of that the server now accepts experiments with custom samplerates in Po
 See newly added [benchmark-results for more](/content/infrastructure.md#benchmarks).
 
 ```text {attention}
-Experiments that fail because of a high sync-offset are most likely caused by too much traffic on the network. Reducing data-rates should fix that (lower samplerates, only record power, ...).
+Experiments that fail because of a high sync-offset are likely caused by too much traffic on the network.
+Reducing data-rates could circumvent that.
+Users can disable power-tracing or use it with lower sample-rates or only record power instead of IV-values.
+As the testbed is embedded into the infrastructure of the university, the issue can also be caused by external factors.
+So rescheduling a failed experiment once or twice is encouraged!
 This is an ongoing issue and will hopefully be fixed in the near future.
 ```
 
