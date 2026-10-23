@@ -17,7 +17,7 @@ Responsible in the sense of Art. 4 No. 7 GDPR is [NES Lab](/about/contact.md).
 
 ### Data Protection Officer TUD
 
-```text {line-block}
+```{line-block}
 Data Protection Officer of the TUD Dresden University of Technology
 Mr Jens Syckor
 01062 Dresden
@@ -28,7 +28,7 @@ Email: <informationssicherheit@tu-dresden.de>
 
 ### Data Protection Officer TUDa
 
-```text {line-block}
+```{line-block}
 Technical University of Darmstadt
 
 The Data Protection Officer
@@ -88,7 +88,7 @@ Data subjects can contact the Data Protection Officer of TUD or TUDa at any time
 
 The responsible supervisory authority for TUD Dresden University of Technology is:
 
-```text {line-block}
+```{line-block}
 Sächsische Datenschutz- und Transparenzbeauftragte
 Frau Dr. Juliane Hundert
 Devrientstraße 5
@@ -100,7 +100,7 @@ Telephone: +49 (0)351 85471-101
 
 Contact address of supervisory authority responsible for Technical University of Darmstadt (TUDa):
 
-```text {line-block}
+```{line-block}
 Der Hessische Beauftragte für Datenschutz und Informationsfreiheit (Hessian Commissioner for Data Protection and Freedom of Information)
 Postfach 3163
 65021 Wiesbaden

@@ -16,7 +16,7 @@ We went a step further and made sure that disabled features have even less of an
 To continue with the GPIO topic - analog switches with a very low leakage current (in the nano-amp-scale) are used to separate GPIO traces from the observer if the feature is not in use.
 This way users with sensitive power-measurements can make sure that the results are least skewed.
 
-```text {note}
+```{note}
 Shepherd Nova has a second (unused) target-port on each observer and our team is [looking for ideas](https://github.com/nes-lab/shepherd-targets/issues/68).
 ```
 

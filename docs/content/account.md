@@ -8,7 +8,7 @@ We will provide you a registration-token in time.
 This token is bound to your e-mail address, has no time-limit and allows [creating an account](#registration-access).
 Please read through the [disclaimer](/about/disclaimer.md) and [privacy policy](/about/privacy.md) prior to registration.
 
-```text {note}
+```{note}
 1) Your e-mail address is acting as your account name and is needed on the server for sending update information on i.e. finished experiments.
 2) To comply with [privacy law](/about/privacy.md), we will disable accounts that have been inactive for 18 month and delete the account in the following clean-up-cycle, no later than 6 months after deactivation.
 3) To comply with the rules of our IT department, we can't offer an unsupervised account creation process.
@@ -25,7 +25,7 @@ To ensure a good user-experience for everyone, we will open our services with th
 It's by no means a one-size-fits-all.
 If your setup requires temporary customization of quotas, feel free to [contact us](/about/contact.md#team).
 
-```text {tip}
+```{tip}
 The [getting started guide](/content/getting_started.md#reduce-size-of-result-files) includes a section that highlights options to reduce the size of result-files.
 It also gives examples for getting a feeling to estimate the result size.
 ```

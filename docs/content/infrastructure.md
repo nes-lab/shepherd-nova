@@ -82,7 +82,7 @@ It makes no sense to list every error-case, but to pick a few:
 - a tracer that misses starting time or ends too early is detected
 - The supervisor for the buffers can detect backpressure, under- & **overflows**, and also **harmed canaries** between separate RAM-sections
 
-```text {note}
+```{note}
 **backpressure** can occur when the gpio-tracer samples more data (capable of 1000+ kSps) than the filesystem can handle (~ 400 kSps) over a certain time.
 In that case buffer-sections need to be skipped to keep the system responsive. This will produce a timestamped error-log.
 ```
@@ -153,7 +153,7 @@ The figure above shows the relative sync between two exemplary observers in the 
 Signals were taken from the chip-select input of the ADC as it is precisely controlled by **PRU0** for **isochronous triggering**.
 This measurement takes the whole synchronization-chain into account and exposes underlying flaws and misbehavior.
 
-```text {seealso}
+```{seealso}
 1) Documentation of the measurements (benchmarking different systems) can be found [in the main repo](https://nes-lab.github.io/shepherd/dev/time_sync_analysis/readme.html).
 2) Additional information about the PI-controller and an accompanying simulation can be found in the [source-directory](https://github.com/nes-lab/shepherd/tree/main/software/kernel-module) of the kernel module.
 ```
@@ -180,7 +180,7 @@ For more insight during the actual emulation the user can leverage the following
 - it's possible to record the voltage levels and output-current of the virtual energy storage instead of the direct target input
   - helpful for configurations with static output voltage (i.e. buck-converter)
 
-```text {seealso}
+```{seealso}
 More details can be found in the [section covering the virtual power source](/content/virtual_source.md).
 ```
 

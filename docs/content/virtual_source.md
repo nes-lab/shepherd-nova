@@ -5,7 +5,7 @@ Detailed documentation will follow - for now the presets can be found in these f
 - [VSrc-Fixture](https://github.com/nes-lab/shepherd-tools/blob/main/shepherd_core/shepherd_core/data_models/content/virtual_source_fixture.yaml)
 - [VHrv-Fixture](https://github.com/nes-lab/shepherd-tools/blob/main/shepherd_core/shepherd_core/data_models/content/virtual_harvester_fixture.yaml)
 
-```text {seealso}
+```{seealso}
 1) The latest documentation of the virtual power source can be found in the [main repo doc](https://nes-lab.github.io/shepherd/user/virtual_source.html).
 2) The API is documented in the [main repo doc](https://nes-lab.github.io/shepherd/api/core_config.html#content-types)
 2) Python-Ports of the virtual source and harvester simulation can be found in the [core-lib](https://github.com/nes-lab/shepherd-tools/tree/main/shepherd_core/shepherd_core/vsource).
@@ -13,7 +13,7 @@ Detailed documentation will follow - for now the presets can be found in these f
 4) Characteristics of the BQ-ICs and other setups were derived from a [set of experiments](https://github.com/orgua/bq_characteristics).
 ```
 
-```text {attention}
+```{attention}
 TODO:
 - port over <https://nes-lab.github.io/shepherd/user/virtual_source.html>
 - show config of vsrc & vhrv

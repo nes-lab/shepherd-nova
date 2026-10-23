@@ -2,7 +2,7 @@
 
 ## NES Lab
 
-```text {line-block}
+```{line-block}
 TU Darmstadt, Department of Computer Science
 [Networked Embedded Systems Lab](https://nes-lab.org/)
 S4|14, Room 2.2.01
@@ -13,7 +13,7 @@ Germany
 
 ## Physical address
 
-```text {line-block}
+```{line-block}
 TU Dresden
 Barkhausen-Bau
 Helmholtzstrasse 18
