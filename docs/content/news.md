@@ -8,7 +8,7 @@ There should be no harm in activating power-tracing and gpio-tracing at the same
 Because of that the server now accepts experiments with custom samplerates in PowerTracing().
 See newly added [benchmark-results for more](/content/infrastructure.md#benchmarks).
 
-```text {attention}
+```{attention}
 Experiments that fail because of a high sync-offset are likely caused by too much traffic on the network.
 Reducing data-rates could circumvent that.
 Users can disable power-tracing or use it with lower sample-rates or only record power instead of IV-values.
